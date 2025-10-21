@@ -1,0 +1,637 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e'
+                        },
+                        'accent': '#f59e0b',
+                        'dark': '#1e293b',
+                        'light-gray': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light-gray font-inter">
+    <div id="app-container" class="min-h-screen">
+        <header id="header" class="bg-gradient-to-r from-primary-900 via-primary-700 to-primary-600 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-8">
+                <nav id="navbar" class="flex items-center justify-between py-6">
+                    <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                <span class="text-2xl font-bold text-white">O</span>
+                            </div>
+                            <div>
+                                <h1 class="text-2xl font-bold text-white">Ohimish</h1>
+                                <p class="text-primary-100 text-sm">Business Directory</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex items-center gap-6 text-primary-100">
+                            <span class="hover:text-white transition cursor-pointer">Companies</span>
+                            <span class="hover:text-white transition cursor-pointer">Categories</span>
+                            <span class="hover:text-white transition cursor-pointer">Reviews</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="relative hidden md:block">
+                            <input type="text" placeholder="Quick search..." class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full py-2 px-4 pr-10 text-white placeholder-white/70 focus:outline-none focus:bg-white/30 transition">
+                            <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-white/70"></i>
+                        </div>
+                        <button class="px-6 py-2.5 bg-accent text-white font-semibold rounded-full hover:bg-amber-500 transition-colors duration-300">
+                            Add Business
+                        </button>
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-white/50 object-cover">
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div id="main-wrapper" class="max-w-7xl mx-auto px-8 py-8">
+            <div class="flex gap-8">
+                <aside id="sidebar" class="w-80 flex-shrink-0">
+                    <div id="filters-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+    <h3 class="font-bold text-dark text-lg mb-4">Filter Companies</h3>
+    <div class="space-y-4">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+            <select class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-500 focus:outline-none">
+                <option>All Locations</option>
+                <option>Brooklyn, NY</option>
+                <option>Liberty, NY</option>
+                <option>Monsey, NY</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+            <div id="category-list" class="space-y-2">
+                <label class="flex items-center">
+                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                    <span class="ml-2 text-sm">Grocery &amp; Food</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                    <span class="ml-2 text-sm">Real Estate</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                    <span class="ml-2 text-sm">Healthcare</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                    <span class="ml-2 text-sm">Fitness &amp; Wellness</span>
+                </label>
+                <div id="additional-categories" class="space-y-2 hidden">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                        <span class="ml-2 text-sm">Automotive</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                        <span class="ml-2 text-sm">Education</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                        <span class="ml-2 text-sm">Financial Services</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                        <span class="ml-2 text-sm">Home &amp; Garden</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                        <span class="ml-2 text-sm">Professional Services</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                        <span class="ml-2 text-sm">Retail &amp; Shopping</span>
+                    </label>
+                </div>
+                <button id="toggle-categories" onclick="toggleCategories()" class="text-primary-600 text-sm font-medium hover:text-primary-700 transition flex items-center gap-1">
+                    <span id="toggle-text">Show more categories</span>
+                    <i id="toggle-icon" class="fa-solid fa-chevron-down text-xs"></i>
+                </button>
+            </div>
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+            <div class="space-y-2">
+                <label class="flex items-center">
+                    <input type="radio" name="rating" class="border-gray-300 text-primary-600 focus:ring-primary-500">
+                    <span class="ml-2 text-sm flex items-center">
+                        <span class="text-yellow-400">★★★★★</span>
+                        <span class="ml-1">(5 stars)</span>
+                    </span>
+                </label>
+                <label class="flex items-center">
+                    <input type="radio" name="rating" class="border-gray-300 text-primary-600 focus:ring-primary-500">
+                    <span class="ml-2 text-sm flex items-center">
+                        <span class="text-yellow-400">★★★★</span>
+                        <span class="ml-1">(4+ stars)</span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div id="featured-card" class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-6 border border-primary-200">
+                        <h3 class="font-bold text-primary-900 text-lg mb-3">Featured Business</h3>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-crown text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary-900">Premium Listing</h4>
+                                <p class="text-primary-700 text-sm">Boost your visibility</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary-600 text-white py-2.5 rounded-lg font-medium hover:bg-primary-700 transition">
+                            Upgrade Now
+                        </button>
+                    </div>
+                </aside>
+
+                <main id="main-content" class="flex-1">
+                    <div id="header-section" class="mb-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <div>
+                                <h1 class="text-3xl font-bold text-dark mb-2">Business Directory</h1>
+                                <p class="text-gray-600">Discover trusted local businesses in your area</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <button class="px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition">
+                                    <i class="fa-solid fa-th-large mr-2"></i>Grid
+                                </button>
+                                <button class="px-4 py-2 bg-primary-600 text-white rounded-lg">
+                                    <i class="fa-solid fa-list mr-2"></i>List
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="stats-bar" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+                            <div class="grid grid-cols-4 gap-6">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary-600">247</div>
+                                    <div class="text-sm text-gray-600">Total Businesses</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-accent">156</div>
+                                    <div class="text-sm text-gray-600">Verified</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-green-600">4.7</div>
+                                    <div class="text-sm text-gray-600">Avg Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-purple-600">23</div>
+                                    <div class="text-sm text-gray-600">Categories</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="company-grid" class="space-y-4">
+                        <div id="company-card-premium" class="bg-white rounded-2xl shadow-sm border border-amber-200 p-6">
+                            <div class="flex gap-6">
+                                <div class="w-32 flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-black rounded-3xl flex items-center justify-center mx-auto overflow-hidden">
+                                        <img class="w-20 h-20 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fcd9efe6ae-dd207965392e80a1566d.png" alt="modern supermarket logo, stylized fruit and vegetables, text">
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="flex items-center justify-center text-yellow-400">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-alt"></i>
+                                        </div>
+                                        <p class="font-bold text-dark mt-1">4.9</p>
+                                        <p class="text-xs text-gray-500">245 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-dark mb-1">Allfresh Supermarket</h3>
+                                    <p class="text-gray-600 text-sm mb-3">Premium grocery store offering fresh produce, organic foods, and gourmet selections. Family-owned business serving the community for over 15 years.</p>
+                                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-location-dot text-primary-500"></i>
+                                            Monsey, NY 10952
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-phone text-primary-500"></i>
+                                            (845) 555-0123
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-clock text-primary-500"></i>
+                                            Open until 10 PM
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-2">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Grocery Store</span>
+                                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Organic Products</span>
+                                        <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full">Fresh Produce</span>
+                                        <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">Gourmet</span>
+                                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Family Owned</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Multi-Location</span>
+                                        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full">Deli</span>
+                                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Supermarket</span>
+                                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">Premium</span>
+                                        <span class="bg-sky-100 text-sky-800 text-xs font-semibold px-3 py-1 rounded-full">Rentals</span>
+                                        <span class="bg-cyan-100 text-cyan-800 text-xs font-semibold px-3 py-1 rounded-full">Commercial</span>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-6 text-sm">
+                                        <p class="text-gray-500">Posts <span class="font-bold text-primary-600 ml-1">21</span></p>
+                                        <p class="text-gray-500">Connections <span class="font-bold text-primary-600 ml-1">89</span></p>
+                                        <p class="text-gray-500">Showcase <span class="font-bold text-primary-600 ml-1">5</span></p>
+                                        <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">45</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="company-card-2" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                            <div class="flex gap-6">
+                                <div class="w-32 flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-red-50 rounded-3xl flex items-center justify-center mx-auto overflow-hidden">
+                                        <img class="w-20 h-20 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/38672f1659-b977581f8d299c784a4e.png" alt="apple tree grocery store logo, fresh fruit theme, warm colors, simple flat design">
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="flex items-center justify-center text-yellow-400">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <p class="font-bold text-dark mt-1">4.8</p>
+                                        <p class="text-xs text-gray-500">125 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-dark mb-1">Appletree Supermarket</h3>
+                                    <p class="text-gray-600 text-sm mb-3">Family-owned grocery chain serving fresh quality foods since 1985. Known for exceptional customer service and locally sourced produce.</p>
+                                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-location-dot text-primary-500"></i>
+                                            Liberty, NY 11750
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-phone text-primary-500"></i>
+                                            (845) 555-0456
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-clock text-primary-500"></i>
+                                            Open until 10 PM
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">Supermarket</span>
+                                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Family Owned</span>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">Multi-Location</span>
+                                        <span class="bg-pink-100 text-pink-800 text-xs font-semibold px-3 py-1 rounded-full">Deli</span>
+                                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Organic Products</span>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-6 text-sm">
+                                        <p class="text-gray-500">Posts <span class="font-bold text-primary-600 ml-1">4</span></p>
+                                        <p class="text-gray-500">Connections <span class="font-bold text-primary-600 ml-1">12</span></p>
+                                        <p class="text-gray-500">Showcase <span class="font-bold text-primary-600 ml-1">1</span></p>
+                                        <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">8</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="company-card-3" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                            <div class="flex gap-6">
+                                <div class="w-32 flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto overflow-hidden">
+                                        <img class="w-16 h-16 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dd8d4a8793-694ec579660576fd998d.png" alt="modern real estate company logo, building silhouette, professional blue theme, simple">
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="flex items-center justify-center text-yellow-400">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-alt"></i>
+                                        </div>
+                                        <p class="font-bold text-dark mt-1">4.9</p>
+                                        <p class="text-xs text-gray-500">310 reviews</p>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-dark mb-1">Artex Property Management</h3>
+                                    <p class="text-gray-600 text-sm mb-3">Professional property management and real estate services. Trusted by thousands of homeowners and investors.</p>
+                                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-location-dot text-primary-500"></i>
+                                            Brooklyn, NY 11201
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-phone text-primary-500"></i>
+                                            (718) 555-0789
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-clock text-primary-500"></i>
+                                            Open until 6 PM
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Real Estate</span>
+                                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">Property Management</span>
+                                        <span class="bg-cyan-100 text-cyan-800 text-xs font-semibold px-3 py-1 rounded-full">Rentals</span>
+                                        <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">Commercial</span>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-6 text-sm">
+                                        <p class="text-gray-500">Posts <span class="font-bold text-primary-600 ml-1">21</span></p>
+                                        <p class="text-gray-500">Connections <span class="font-bold text-primary-600 ml-1">89</span></p>
+                                        <p class="text-gray-500">Showcase <span class="font-bold text-primary-600 ml-1">5</span></p>
+                                        <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">45</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="company-card-4" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                            <div class="flex gap-6">
+                                <div class="w-32 flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-gray-100 rounded-3xl flex items-center justify-center mx-auto">
+                                        <span class="text-3xl font-semibold text-primary-600">CB</span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="flex items-center justify-center text-gray-300">
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <p class="font-bold text-dark mt-1">0.0</p>
+                                        <p class="text-xs text-gray-500">Not Yet Rated</p>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-dark mb-1">Coldwell Banker Properties</h3>
+                                    <p class="text-gray-600 text-sm mb-3">National real estate brokerage with extensive property listings. Trusted by thousands of homeowners and investors.</p>
+                                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-location-dot text-primary-500"></i>
+                                            Bellville, TX 78901
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-phone text-primary-500"></i>
+                                            (979) 555-0321
+                                        </span>
+                                        <span class="flex items-center gap-1.5">
+                                            <i class="fa-solid fa-clock text-primary-500"></i>
+                                            Open until 5 PM
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Real Estate</span>
+                                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-3 py-1 rounded-full">National Brokerage</span>
+                                        <span class="bg-teal-100 text-teal-800 text-xs font-semibold px-3 py-1 rounded-full">Property Listings</span>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-6 text-sm">
+                                        <p class="text-gray-500">Posts <span class="font-bold text-primary-600 ml-1">0</span></p>
+                                        <p class="text-gray-500">Connections <span class="font-bold text-primary-600 ml-1">0</span></p>
+                                        <p class="text-gray-500">Showcase <span class="font-bold text-primary-600 ml-1">0</span></p>
+                                        <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">0</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="company-card-5" class="bg-white rounded-2xl shadow-lg border-2 border-green-500/20 p-8 relative overflow-hidden">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
+                            </div>
+                            <div class="flex items-start gap-6">
+                                <div class="flex-shrink-0">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-emerald-100 to-teal-200 rounded-3xl flex items-center justify-center overflow-hidden">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7e631aaa03-57e3b402fe357e684d18.png" alt="modern medical clinic logo, health cross symbol, clean professional design">
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <div class="flex items-center justify-center gap-1">
+                                            <span class="text-yellow-400">★★★★★</span>
+                                        </div>
+                                        <div class="text-sm font-bold text-dark mt-1">4.8</div>
+                                        <div class="text-xs text-gray-500">892 reviews</div>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-start justify-between mb-3">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-dark mb-1">HealthFirst Medical Centers</h3>
+                                            <p class="text-gray-600 mb-2">Comprehensive healthcare services with multiple locations. Specialized in family medicine, urgent care, and preventive health services.</p>
+                                            <div class="bg-gray-50 rounded-lg p-3 mb-3">
+                                                <h4 class="font-semibold text-sm text-gray-700 mb-2">Branch Locations:</h4>
+                                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-green-600"></i>
+                                                        <span>Brooklyn Main - (718) 555-0101</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-green-600"></i>
+                                                        <span>Manhattan West - (212) 555-0102</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-green-600"></i>
+                                                        <span>Queens Plaza - (718) 555-0103</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-green-600"></i>
+                                                        <span>Bronx Center - (718) 555-0104</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </button>
+                                            <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-share"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1.5 rounded-full">Healthcare</span>
+                                        <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1.5 rounded-full">Family Medicine</span>
+                                        <span class="bg-red-100 text-red-700 text-xs font-medium px-3 py-1.5 rounded-full">Urgent Care</span>
+                                        <span class="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full">Preventive Care</span>
+                                        <span class="bg-teal-100 text-teal-700 text-xs font-medium px-3 py-1.5 rounded-full">Multi-Location</span>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-6 text-sm">
+                                        <p class="text-gray-500">Posts <span class="font-bold text-primary-600 ml-1.5">34</span></p>
+                                        <p class="text-gray-500">Connections <span class="font-bold text-primary-600 ml-1.5">156</span></p>
+                                        <p class="text-gray-500">Showcase <span class="font-bold text-primary-600 ml-1.5">12</span></p>
+                                        <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1.5">78</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                                    <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </button>
+                                    <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="company-card-6" class="bg-white rounded-2xl shadow-lg border-2 border-orange-500/20 p-8 relative overflow-hidden">
+                            <div class="absolute top-4 right-4">
+                                <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
+                            </div>
+                            <div class="flex items-start gap-6">
+                                <div class="flex-shrink-0">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-orange-100 to-amber-200 rounded-3xl flex items-center justify-center overflow-hidden">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/af28bd3320-87b24fd9d91570fac133.png" alt="modern fitness gym logo, dumbbell icon, energetic orange and black design">
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <div class="flex items-center justify-center gap-1">
+                                            <span class="text-yellow-400">★★★★★</span>
+                                        </div>
+                                        <div class="text-sm font-bold text-dark mt-1">4.7</div>
+                                        <div class="text-xs text-gray-500">567 reviews</div>
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-start justify-between mb-3">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-dark mb-1">PowerFit Fitness Centers</h3>
+                                            <p class="text-gray-600 mb-2">State-of-the-art fitness facilities with personal training, group classes, and wellness programs. Multiple locations across the tri-state area.</p>
+                                            <div class="bg-gray-50 rounded-lg p-3 mb-3">
+                                                <h4 class="font-semibold text-sm text-gray-700 mb-2">Branch Locations:</h4>
+                                                <div class="grid grid-cols-1 gap-2 text-xs">
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-orange-600"></i>
+                                                        <span>Downtown Brooklyn - (718) 555-0201</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-orange-600"></i>
+                                                        <span>Midtown Manhattan - (212) 555-0202</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fa-solid fa-location-dot text-orange-600"></i>
+                                                        <span>Long Island City - (718) 555-0203</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex gap-2">
+                                            <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-heart"></i>
+                                            </button>
+                                            <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-share"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-orange-100 text-orange-700 text-xs font-medium px-3 py-1.5 rounded-full">Fitness Center</span>
+                                        <span class="bg-red-100 text-red-700 text-xs font-medium px-3 py-1.5 rounded-full">Personal Training</span>
+                                        <span class="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full">Group Classes</span>
+                                        <span class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1.5 rounded-full">Wellness Programs</span>
+                                        <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1.5 rounded-full">24/7 Access</span>
+                                    </div>
+                                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center gap-6 text-sm">
+                                        <p class="text-gray-500">Posts <span class="font-bold text-primary-600 ml-1.5">28</span></p>
+                                        <p class="text-gray-500">Connections <span class="font-bold text-primary-600 ml-1.5">234</span></p>
+                                        <p class="text-gray-500">Showcase <span class="font-bold text-primary-600 ml-1.5">8</span></p>
+                                        <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1.5">92</span></p>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                                    <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                    </button>
+                                    <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+</body></html>
