@@ -37,30 +37,30 @@
     <div id="app-container" class="min-h-screen">
         <header id="header" class="bg-gradient-to-r from-primary-900 via-primary-700 to-primary-600 relative overflow-hidden">
             <div class="absolute inset-0 bg-black/10"></div>
-            <div class="relative z-10 max-w-7xl mx-auto px-8">
-                <nav id="navbar" class="flex items-center justify-between py-6">
+            <div class="relative z-10 max-w-7xl mx-auto px-3 lg:px-8">
+                <nav id="navbar" class="flex items-center justify-between py-3 lg:py-6">
                     <div class="flex items-center gap-8">
-                        <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1 lg:gap-3">
                             <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                                <span class="text-2xl font-bold text-white">O</span>
+                                <span class="text-xl lg:text-2xl font-bold text-white">O</span>
                             </div>
                             <div>
-                                <h1 class="text-2xl font-bold text-white">Ohimish</h1>
-                                <p class="text-primary-100 text-sm">Business Directory</p>
+                                <h1 class="text-xl lg:text-2xl font-bold text-white">Ohimish</h1>
+                                <p class="text-primary-100 text-xs lg:text-sm">Business Directory</p>
                             </div>
                         </div>
-                        <div class="hidden lg:flex items-center gap-6 text-primary-100">
+                        <!-- <div class="hidden lg:flex items-center gap-6 text-primary-100">
                             <span class="hover:text-white transition cursor-pointer">Companies</span>
                             <span class="hover:text-white transition cursor-pointer">Categories</span>
                             <span class="hover:text-white transition cursor-pointer">Reviews</span>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 lg:gap-4">
                         <div class="relative hidden md:block">
                             <input type="text" placeholder="Quick search..." class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full py-2 px-4 pr-10 text-white placeholder-white/70 focus:outline-none focus:bg-white/30 transition">
                             <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-white/70"></i>
                         </div>
-                        <button class="px-6 py-2.5 bg-accent text-white font-semibold rounded-full hover:bg-amber-500 transition-colors duration-300">
+                        <button class="px-4 lg:px-6 py-2.5 bg-accent text-white font-semibold rounded-full hover:bg-amber-500 transition-colors duration-300 text-sm lg:text-md">
                             Add Business
                         </button>
                         <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-white/50 object-cover">
@@ -69,9 +69,9 @@
             </div>
         </header>
 
-        <div id="main-wrapper" class="max-w-7xl mx-auto px-8 py-8">
-            <div class="flex gap-8">
-                <aside id="sidebar" class="w-80 flex-shrink-0">
+        <div id="main-wrapper" class="max-w-7xl mx-auto px-2 lg:px-8 py-8">
+            <div class="lg:flex gap-8">
+                <aside id="sidebar" class="lg:w-80 flex-shrink-0">
                     <div id="filters-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
     <h3 class="font-bold text-dark text-lg mb-4">Filter Companies</h3>
     <div class="space-y-4">
@@ -174,14 +174,14 @@
                     </div>
                 </aside>
 
-                <main id="main-content" class="flex-1">
+                <main id="main-content" class="flex-1 mt-5 lg:mt-0">
                     <div id="header-section" class="mb-8">
-                        <div class="flex items-center justify-between mb-6">
+                        <div class="lg:flex items-center justify-between mb-6">
                             <div>
-                                <h1 class="text-3xl font-bold text-dark mb-2">Business Directory</h1>
+                                <h1 class="text-2xl lg:text-3xl font-bold text-dark mb-1 lg:mb-2">Business Directory</h1>
                                 <p class="text-gray-600">Discover trusted local businesses in your area</p>
                             </div>
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-3 mt-4 lg:mt-0">
                                 <a href="companiesGrid.html" class="px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition">
                                     <i class="fa-solid fa-th-large mr-2"></i>Grid
                                 </a>
@@ -191,8 +191,8 @@
                             </div>
                         </div>
 
-                        <div id="stats-bar" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
-                            <div class="grid grid-cols-4 gap-6">
+                        <div id="stats-bar" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 lg:p-6 mb-6">
+                            <div class="grid grid-cols-4 gap-2 lg:gap-6">
                                 <div class="text-center">
                                     <div class="text-2xl font-bold text-primary-600">247</div>
                                     <div class="text-sm text-gray-600">Total Businesses</div>
@@ -214,10 +214,10 @@
                     </div>
 
                     <div id="company-grid" class="space-y-4">
-                        <div id="company-card-premium" class="bg-white rounded-2xl shadow-sm border border-amber-200 p-6">
-                            <a href="companyDetail.html" class="flex gap-6">
-                                <div class="w-32 flex-shrink-0 text-center">
-                                    <div class="w-24 h-24 bg-black rounded-3xl flex items-center justify-center mx-auto overflow-hidden">
+                        <div id="company-card-premium" class="bg-white rounded-2xl shadow-sm border border-amber-200 p-2 lg:p-6">
+                            <a href="companyDetail.html" class="lg:flex gap-6">
+                                <div class="w-32 flex gap-3 mb-3 lg:block flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-black rounded-3xl flex items-center justify-center mx-auto overflow-hidden flex-shrink-0">
                                         <img class="w-20 h-20 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fcd9efe6ae-dd207965392e80a1566d.png" alt="modern supermarket logo, stylized fruit and vegetables, text">
                                     </div>
                                     <div class="mt-3">
@@ -271,7 +271,7 @@
                                         <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">45</span></p>
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-3">
+                                <div class="flex mt-4 lg:mt-0 lg:flex-col gap-3">
                                     <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
                                         <i class="fa-solid fa-thumbs-up"></i>
                                     </button>
@@ -285,10 +285,10 @@
                             </a>
                         </div>
 
-                        <div id="company-card-2" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                            <a href="companyDetail.html" class="flex gap-6">
-                                <div class="w-32 flex-shrink-0 text-center">
-                                    <div class="w-24 h-24 bg-red-50 rounded-3xl flex items-center justify-center mx-auto overflow-hidden">
+                        <div id="company-card-2" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-2 lg:p-6">
+                            <a href="companyDetail.html" class="lg:flex gap-6">
+                                <div class="w-32 flex gap-3 mb-3 lg:block flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-red-50 rounded-3xl flex items-center justify-center mx-auto overflow-hidden flex-shrink-0">
                                         <img class="w-20 h-20 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/38672f1659-b977581f8d299c784a4e.png" alt="apple tree grocery store logo, fresh fruit theme, warm colors, simple flat design">
                                     </div>
                                     <div class="mt-3">
@@ -334,7 +334,7 @@
                                         <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">8</span></p>
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-3">
+                                <div class="flex mt-4 lg:mt-0 lg:flex-col gap-3">
                                     <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
                                         <i class="fa-solid fa-thumbs-up"></i>
                                     </button>
@@ -348,10 +348,10 @@
                             </a>
                         </div>
 
-                        <div id="company-card-3" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                            <a href="companyDetail.html" class="flex gap-6">
-                                <div class="w-32 flex-shrink-0 text-center">
-                                    <div class="w-24 h-24 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto overflow-hidden">
+                        <div id="company-card-3" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-2 lg:p-6">
+                            <a href="companyDetail.html" class="lg:flex gap-6">
+                                <div class="w-32 flex gap-3 mb-3 lg:block flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-blue-50 rounded-3xl flex items-center justify-center mx-auto overflow-hidden flex-shrink-0">
                                         <img class="w-16 h-16 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dd8d4a8793-694ec579660576fd998d.png" alt="modern real estate company logo, building silhouette, professional blue theme, simple">
                                     </div>
                                     <div class="mt-3">
@@ -396,7 +396,7 @@
                                         <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">45</span></p>
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-3">
+                                <div class="flex mt-4 lg:mt-0 lg:flex-col gap-3">
                                     <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
                                         <i class="fa-solid fa-thumbs-up"></i>
                                     </button>
@@ -410,10 +410,10 @@
                             </a>
                         </div>
 
-                        <div id="company-card-4" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                            <a href="companyDetail.html" class="flex gap-6">
-                                <div class="w-32 flex-shrink-0 text-center">
-                                    <div class="w-24 h-24 bg-gray-100 rounded-3xl flex items-center justify-center mx-auto">
+                        <div id="company-card-4" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-2 lg:p-6">
+                            <a href="companyDetail.html" class="lg:flex gap-6">
+                                <div class="w-32 flex gap-3 mb-3 lg:block flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-gray-100 rounded-3xl flex items-center justify-center mx-auto flex-shrink-0">
                                         <span class="text-3xl font-semibold text-primary-600">CB</span>
                                     </div>
                                     <div class="mt-3">
@@ -457,7 +457,7 @@
                                         <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1">0</span></p>
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-3">
+                                <div class="flex mt-4 lg:mt-0 lg:flex-col gap-3">
                                     <button class="w-10 h-10 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition">
                                         <i class="fa-solid fa-thumbs-up"></i>
                                     </button>
@@ -471,13 +471,13 @@
                             </a>
                         </div>
 
-                        <div id="company-card-5" class="bg-white rounded-2xl shadow-lg border-2 border-green-500/20 p-8 relative overflow-hidden">
-                            <div class="absolute top-4 right-4">
+                        <div id="company-card-5" class="bg-white rounded-2xl shadow-lg border-2 border-green-500/20 p-2 lg:p-6 relative overflow-hidden">
+                            <div class="absolute top-1 right-4">
                                 <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
                             </div>
-                            <a href="companyDetail.html" class="flex items-start gap-6">
-                                <div class="flex-shrink-0">
-                                    <div class="w-24 h-24 bg-gradient-to-br from-emerald-100 to-teal-200 rounded-3xl flex items-center justify-center overflow-hidden">
+                            <a href="companyDetail.html" class="lg:flex items-start gap-6">
+                                <div class="w-32 flex gap-3 mb-3 lg:block flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-emerald-100 to-teal-200 rounded-3xl flex items-center justify-center overflow-hidden flex-shrink-0">
                                         <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7e631aaa03-57e3b402fe357e684d18.png" alt="modern medical clinic logo, health cross symbol, clean professional design">
                                     </div>
                                     <div class="text-center mt-4">
@@ -538,7 +538,7 @@
                                         <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1.5">78</span></p>
                                     </div>
                                 </div>
-                                <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                                <div class="flex mt-4 lg:mt-0 lg:flex-col gap-3">
                                     <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
                                         <i class="fa-solid fa-thumbs-up"></i>
                                     </button>
@@ -552,13 +552,13 @@
                             </a>
                         </div>
 
-                        <div id="company-card-6" class="bg-white rounded-2xl shadow-lg border-2 border-orange-500/20 p-8 relative overflow-hidden">
-                            <div class="absolute top-4 right-4">
+                        <div id="company-card-6" class="bg-white rounded-2xl shadow-lg border-2 border-orange-500/20 p-2 lg:p-6 relative overflow-hidden">
+                            <div class="absolute top-1 right-4">
                                 <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
                             </div>
-                            <a href="companyDetail.html" class="flex items-start gap-6">
-                                <div class="flex-shrink-0">
-                                    <div class="w-24 h-24 bg-gradient-to-br from-orange-100 to-amber-200 rounded-3xl flex items-center justify-center overflow-hidden">
+                            <a href="companyDetail.html" class="lg:flex items-start gap-6">
+                                <div class="w-32 flex gap-3 mb-3 lg:block flex-shrink-0 text-center">
+                                    <div class="w-24 h-24 bg-gradient-to-br from-orange-100 to-amber-200 rounded-3xl flex items-center justify-center overflow-hidden flex-shrink-0">
                                         <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/af28bd3320-87b24fd9d91570fac133.png" alt="modern fitness gym logo, dumbbell icon, energetic orange and black design">
                                     </div>
                                     <div class="text-center mt-4">
@@ -615,7 +615,7 @@
                                         <p class="text-gray-500">Recommends <span class="font-bold text-primary-600 ml-1.5">92</span></p>
                                     </div>
                                 </div>
-                                <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                                <div class="flex mt-4 lg:mt-0 lg:flex-col gap-3">
                                     <button class="w-12 h-12 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
                                         <i class="fa-solid fa-thumbs-up"></i>
                                     </button>

@@ -19,16 +19,16 @@
                     },
                     colors: {
                         'primary': {
-                            50: '#fdf4ff',
-                            100: '#fae8ff',
-                            500: '#a855f7',
-                            600: '#9333ea',
-                            700: '#7c3aed',
-                            900: '#581c87'
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e'
                         },
-                        'accent': '#06d6a0',
-                        'dark': '#1a1a2e',
-                        'light-gray': '#f7fafc'
+                        'accent': '#f59e0b',
+                        'dark': '#1e293b',
+                        'light-gray': '#f8fafc'
                     }
                 }
             }
@@ -60,45 +60,47 @@
 </head>
 <body class="bg-gradient-to-br from-primary-50 via-white to-accent/10 font-poppins">
     <div id="app-container" class="min-h-screen">
-        <header id="header" class="bg-white shadow-xl border-b-4 border-primary-600">
-            <div class="max-w-7xl mx-auto px-8">
-                <nav id="navbar" class="flex items-center justify-between py-6">
+        <header id="header" class="bg-gradient-to-r from-primary-900 via-primary-700 to-primary-600 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="relative z-10 max-w-7xl mx-auto px-3 lg:px-8">
+                <nav id="navbar" class="flex items-center justify-between py-3 lg:py-6">
                     <div class="flex items-center gap-8">
-                        <div class="flex items-center gap-4">
-                            <div class="w-14 h-14 bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl flex items-center justify-center shadow-lg">
-                                <span class="text-2xl font-bold text-white">B</span>
+                        <div class="flex items-center gap-1 lg:gap-3">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                                <span class="text-xl lg:text-2xl font-bold text-white">O</span>
                             </div>
                             <div>
-                                <h1 class="text-2xl font-bold text-dark">BizConnect</h1>
-                                <p class="text-primary-600 text-sm font-medium">Business Network</p>
+                                <h1 class="text-xl lg:text-2xl font-bold text-white">Ohimish</h1>
+                                <p class="text-primary-100 text-xs lg:text-sm">Business Directory</p>
                             </div>
                         </div>
-                        <div class="hidden lg:flex items-center gap-8 text-gray-700">
-                            <span class="hover:text-primary-600 transition cursor-pointer font-medium">Directory</span>
-                            <span class="hover:text-primary-600 transition cursor-pointer font-medium">Services</span>
-                            <span class="hover:text-primary-600 transition cursor-pointer font-medium">Reviews</span>
-                        </div>
+                        <!-- <div class="hidden lg:flex items-center gap-6 text-primary-100">
+                            <span class="hover:text-white transition cursor-pointer">Companies</span>
+                            <span class="hover:text-white transition cursor-pointer">Categories</span>
+                            <span class="hover:text-white transition cursor-pointer">Reviews</span>
+                        </div> -->
                     </div>
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 lg:gap-4">
                         <div class="relative hidden md:block">
-                            <input type="text" placeholder="Search businesses..." class="bg-gray-100 border-2 border-transparent rounded-2xl py-3 px-5 pr-12 text-dark placeholder-gray-500 focus:outline-none focus:border-primary-500 focus:bg-white transition w-80">
-                            <i class="fa-solid fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="text" placeholder="Quick search..." class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full py-2 px-4 pr-10 text-white placeholder-white/70 focus:outline-none focus:bg-white/30 transition">
+                            <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-white/70"></i>
                         </div>
-                        <button class="px-6 py-3 bg-gradient-to-r from-accent to-emerald-500 text-white font-semibold rounded-2xl hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                            <i class="fa-solid fa-plus mr-2"></i>Add Business
+                        <button class="px-4 lg:px-6 py-2.5 bg-accent text-white font-semibold rounded-full hover:bg-amber-500 transition-colors duration-300 text-sm lg:text-md">
+                            Add Business
                         </button>
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-white/50 object-cover">
                     </div>
                 </nav>
             </div>
         </header>
 
-        <div id="main-wrapper" class="max-w-7xl mx-auto px-8 py-12">
+        <div id="main-wrapper" class="max-w-7xl mx-auto px-3 lg:px-8 py-12">
             <div id="header-section" class="text-center mb-12">
-                <h1 class="text-5xl font-bold text-dark mb-4">Discover Amazing Businesses</h1>
-                <p class="text-xl text-gray-600 mb-8">Connect with trusted local businesses in your community</p>
+                <h1 class="text-2xl lg:text-5xl font-bold text-dark mb-4">Discover Amazing Businesses</h1>
+                <p class="text-md lg:text-xl text-gray-600 mb-8">Connect with trusted local businesses in your community</p>
                 
                 <!-- Filter Options Section -->
-                <div id="filter-section" class="bg-white rounded-3xl shadow-xl border border-gray-100 p-6 mb-8">
+                <div id="filter-section" class="bg-white rounded-3xl shadow-xl border border-gray-100 p-3 lg:p-6 mb-8">
                     <div class="flex items-center justify-between mb-6">
                         <h3 class="text-lg font-semibold text-dark">Filter & Sort</h3>
                         <button class="text-primary-600 hover:text-primary-700 font-medium text-sm">
@@ -106,7 +108,7 @@
                         </button>
                     </div>
                     
-                    <div class="grid grid-cols-5 gap-4">
+                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
                         <!-- Category Filter -->
                         <div class="relative">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
@@ -170,7 +172,7 @@
                     </div>
 
                     <!-- Quick Filter Tags -->
-                    <div class="flex items-center gap-3 mt-6 pt-6 border-t border-gray-100">
+                    <div class="flex flex-wrap items-center gap-1 lg:gap-3 mt-6 pt-6 border-t border-gray-100">
                         <span class="text-sm font-medium text-gray-600">Quick Filters:</span>
                         <button class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-200 transition">
                             <i class="fa-solid fa-shield-check mr-1"></i>Verified
@@ -196,7 +198,7 @@
                     </a>
                 </div>
 
-                <div id="stats-cards" class="grid grid-cols-4 gap-6 mb-12">
+                <div id="stats-cards" class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-12">
                     <div class="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
                         <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
                             <i class="fa-solid fa-building text-white"></i>
@@ -228,7 +230,7 @@
                 </div>
             </div>
 
-            <div id="grid-view" class="grid grid-cols-3 gap-8">
+            <div id="grid-view" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div id="company-card-1" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                     <a href="companyDetail.html">
                         <div class="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
