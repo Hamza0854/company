@@ -90,418 +90,390 @@
             </div>
         </header>
 
-        <div id="main-wrapper" class="max-w-7xl mx-auto px-3 lg:px-8 py-12">
-            <div id="header-section" class="text-center mb-12">
-                <h1 class="text-2xl lg:text-5xl font-bold text-dark mb-4">Discover Amazing Businesses</h1>
-                <p class="text-md lg:text-xl text-gray-600 mb-8">Connect with trusted local businesses in your community</p>
-                
-                <!-- Filter Options Section -->
-                <div id="filter-section" class="bg-white rounded-3xl shadow-xl border border-gray-100 p-3 lg:p-6 mb-8">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="text-lg font-semibold text-dark">Filter & Sort</h3>
-                        <button class="text-primary-600 hover:text-primary-700 font-medium text-sm">
-                            <i class="fa-solid fa-rotate-right mr-1"></i>Reset Filters
+        <div id="main-wrapper" class="max-w-7xl mx-auto px-3 lg:px-8 py-8">
+            <div class="block lg:flex gap-8">
+                <aside id="sidebar" class="lg:w-80 flex-shrink-0">
+                    <div id="filters-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+                        <h3 class="font-bold text-dark text-lg mb-4">Filter Companies</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                                <select class="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-500 focus:outline-none">
+                                    <option>All Locations</option>
+                                    <option>Brooklyn, NY</option>
+                                    <option>Liberty, NY</option>
+                                    <option>Monsey, NY</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                        <span class="ml-2 text-sm">Grocery & Food</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                        <span class="ml-2 text-sm">Real Estate</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="rounded border-gray-300 text-primary-600 focus:ring-primary-500">
+                                        <span class="ml-2 text-sm">Services</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="radio" name="rating" class="border-gray-300 text-primary-600 focus:ring-primary-500">
+                                        <span class="ml-2 text-sm flex items-center">
+                                            <span class="text-yellow-400">★★★★★</span>
+                                            <span class="ml-1">(5 stars)</span>
+                                        </span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="rating" class="border-gray-300 text-primary-600 focus:ring-primary-500">
+                                        <span class="ml-2 text-sm flex items-center">
+                                            <span class="text-yellow-400">★★★★</span>
+                                            <span class="ml-1">(4+ stars)</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="featured-card" class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl p-6 border border-primary-200">
+                        <h3 class="font-bold text-primary-900 text-lg mb-3">Featured Business</h3>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center">
+                                <i class="fa-solid fa-crown text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary-900">Premium Listing</h4>
+                                <p class="text-primary-700 text-sm">Boost your visibility</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary-600 text-white py-2.5 rounded-lg font-medium hover:bg-primary-700 transition">
+                            Upgrade Now
                         </button>
                     </div>
-                    
-                    <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
-                        <!-- Category Filter -->
-                        <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
-                            <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-dark focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                                <option>All Categories</option>
-                                <option>Healthcare</option>
-                                <option>Grocery</option>
-                                <option>Real Estate</option>
-                                <option>Restaurants</option>
-                                <option>Services</option>
-                            </select>
+                </aside>
+
+                <main id="main-content" class="flex-1 mt-8 lg:mt-0">
+                    <div id="header-section" class="mb-8">
+                        <div class="lg:flex items-center justify-between mb-6">
+                            <div>
+                                <h1 class="text-3xl font-bold text-dark mb-2">Business Directory</h1>
+                                <p class="text-gray-600">Discover trusted local businesses in your area</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <a href="companiesGrid.html" class="px-4 py-2 bg-primary-600 text-white rounded-lg">
+                                    <i class="fa-solid fa-th-large mr-2"></i>Grid
+                                </a>
+                                <a href="companies.html" class="px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition">
+                                    <i class="fa-solid fa-list mr-2"></i>List
+                                </a>
+                            </div>
                         </div>
 
-                        <!-- Location Filter -->
-                        <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
-                            <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-dark focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                                <option>All Locations</option>
-                                <option>Brooklyn, NY</option>
-                                <option>Manhattan, NY</option>
-                                <option>Monsey, NY</option>
-                                <option>Queens, NY</option>
-                                <option>Spring Valley, NY</option>
-                            </select>
-                        </div>
-
-                        <!-- Rating Filter -->
-                        <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
-                            <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-dark focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                                <option>All Ratings</option>
-                                <option>4.5+ Stars</option>
-                                <option>4.0+ Stars</option>
-                                <option>3.5+ Stars</option>
-                                <option>3.0+ Stars</option>
-                            </select>
-                        </div>
-
-                        <!-- Business Type -->
-                        <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Type</label>
-                            <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-dark focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                                <option>All Types</option>
-                                <option>Single Location</option>
-                                <option>Multi-Branch</option>
-                                <option>Verified Only</option>
-                            </select>
-                        </div>
-
-                        <!-- Sort Options -->
-                        <div class="relative">
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
-                            <select class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-dark focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
-                                <option>Most Popular</option>
-                                <option>Highest Rated</option>
-                                <option>Newest</option>
-                                <option>A-Z</option>
-                                <option>Z-A</option>
-                            </select>
+                        <div id="stats-bar" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 lg:p-6 mb-6">
+                            <div class="grid grid-cols-4 gap-6">
+                                <div class="text-center">
+                                    <div class="text-xl lg:text-2xl font-bold text-primary-600">247</div>
+                                    <div class="text-xs lg:text-sm text-gray-600">Total Businesses</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl lg:text-2xl font-bold text-accent">156</div>
+                                    <div class="text-xs lg:text-sm text-gray-600">Verified</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl lg:text-2xl font-bold text-green-600">4.7</div>
+                                    <div class="text-xs lg:text-sm text-gray-600">Avg Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-xl lg:text-2xl font-bold text-purple-600">23</div>
+                                    <div class="text-xs lg:text-sm text-gray-600">Categories</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Quick Filter Tags -->
-                    <div class="flex flex-wrap items-center gap-1 lg:gap-3 mt-6 pt-6 border-t border-gray-100">
-                        <span class="text-sm font-medium text-gray-600">Quick Filters:</span>
-                        <button class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium hover:bg-primary-200 transition">
-                            <i class="fa-solid fa-shield-check mr-1"></i>Verified
-                        </button>
-                        <button class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium hover:bg-yellow-200 transition">
-                            <i class="fa-solid fa-star mr-1"></i>Top Rated
-                        </button>
-                        <button class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium hover:bg-green-200 transition">
-                            <i class="fa-solid fa-clock mr-1"></i>Open Now
-                        </button>
-                        <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium hover:bg-blue-200 transition">
-                            <i class="fa-solid fa-map-marker-alt mr-1"></i>Near Me
-                        </button>
+                    <div id="company-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8">
+                        
+                        <div id="company-card-1" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border-2 border-amber-400 overflow-hidden group">
+                            <a href="companyDetail.html">
+                                <div class="h-52 relative overflow-hidden">
+                                    <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/21c91aa617-855b296057947ab25575.png" alt="bright and clean modern supermarket interior with colorful product displays" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white">
+                                            <i class="fa-solid fa-thumbs-up text-sm"></i>
+                                        </button>
+                                         <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white">
+                                            <i class="fa-solid fa-share-nodes text-sm"></i>
+                                        </button>
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white">
+                                            <i class="fa-solid fa-bookmark text-sm"></i>
+                                        </button>
+                                    </div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
+                                            <img class="w-24 h-24 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fcd9efe6ae-dd207965392e80a1566d.png" alt="Allfresh supermarket logo" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 lg:p-6">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-dark">Allfresh Supermarket</h3>
+                                        <div class="flex items-center gap-1 text-yellow-500">
+                                            <i class="fa-solid fa-star"></i>
+                                            <span class="text-dark font-semibold text-md">4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Premium grocery store offering fresh produce, organic foods, and gourmet selections.</p>
+                                    <div class="space-y-3 text-sm text-gray-700 mb-5">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-location-dot text-primary-500 w-4 text-center"></i>
+                                            <span class="flex-1">Monsey, NY 10952</span>
+                                            <span class="text-primary-600 font-semibold text-xs cursor-pointer hover:underline">+2</span>
+                                            <i class="fa-solid fa-play text-primary-600 text-xs cursor-pointer"></i>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-phone text-primary-500 w-4 text-center"></i>
+                                            <span>(845) 555-0123</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-5">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1.5 rounded-lg">Grocery</span>
+                                        <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1.5 rounded-lg">Organic</span>
+                                        <span class="bg-amber-100 text-amber-800 text-xs font-medium px-3 py-1.5 rounded-lg">Fresh</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+                                        <span>Posts <span class="font-bold text-dark">21</span></span>
+                                        <span>Connections <span class="font-bold text-dark">89</span></span>
+                                        <span>Showcase <span class="font-bold text-dark">5</span></span>
+                                        <span>Recommends <span class="font-bold text-dark">45</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div id="company-card-2" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                            <a href="companyDetail.html">
+                                <div class="h-52 relative overflow-hidden">
+                                    <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1587722b0b-2904498f1dcf2cd8d734.png" alt="rustic organic grocery store interior with wooden crates and fresh produce" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                     <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white">
+                                            <i class="fa-solid fa-thumbs-up text-sm"></i>
+                                        </button>
+                                         <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white">
+                                            <i class="fa-solid fa-share-nodes text-sm"></i>
+                                        </button>
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white">
+                                            <i class="fa-solid fa-bookmark text-sm"></i>
+                                        </button>
+                                    </div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
+                                            <img class="w-24 h-24 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/38672f1659-b977581f8d299c784a4e.png" alt="Appletree Supermarket logo" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 lg:p-6">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-dark">Appletree Supermarket</h3>
+                                        <div class="flex items-center gap-1 text-yellow-500">
+                                            <i class="fa-solid fa-star"></i>
+                                            <span class="text-dark font-semibold text-md">4.8</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Family-owned grocery chain serving fresh quality foods since 1985.</p>
+                                    <div class="space-y-3 text-sm text-gray-700 mb-5">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-location-dot text-primary-500 w-4 text-center"></i>
+                                            <span>Liberty, NY 11750</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-phone text-primary-500 w-4 text-center"></i>
+                                            <span>(845) 555-0456</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-5">
+                                        <span class="bg-red-100 text-red-800 text-xs font-medium px-3 py-1.5 rounded-lg">Supermarket</span>
+                                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1.5 rounded-lg">Family Owned</span>
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1.5 rounded-lg">Multi-Location</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+                                        <span>Posts <span class="font-bold text-dark">21</span></span>
+                                        <span>Connections <span class="font-bold text-dark">89</span></span>
+                                        <span>Showcase <span class="font-bold text-dark">5</span></span>
+                                        <span>Recommends <span class="font-bold text-dark">45</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div id="company-card-3" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+                            <a href="companyDetail.html">
+                                <div class="h-52 relative overflow-hidden">
+                                    <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bbd4c4bb14-432e9157744869b93b25.png" alt="modern city skyline with residential buildings, real estate concept" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-thumbs-up text-sm"></i></button>
+                                         <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-share-nodes text-sm"></i></button>
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-bookmark text-sm"></i></button>
+                                    </div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
+                                            <img class="w-24 h-24 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dd8d4a8793-694ec579660576fd998d.png" alt="Artex Property Management logo" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 lg:p-6">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-dark">Artex Property Management</h3>
+                                        <div class="flex items-center gap-1 text-yellow-500">
+                                            <i class="fa-solid fa-star"></i>
+                                            <span class="text-dark font-semibold text-md">4.9</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Professional property management and real estate services.</p>
+                                    <div class="space-y-3 text-sm text-gray-700 mb-5">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-location-dot text-primary-500 w-4 text-center"></i>
+                                            <span>Brooklyn, NY 11201</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-phone text-primary-500 w-4 text-center"></i>
+                                            <span>(718) 555-0789</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-5">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1.5 rounded-lg">Real Estate</span>
+                                        <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1.5 rounded-lg">Property Mgmt</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+                                        <span>Posts <span class="font-bold text-dark">12</span></span>
+                                        <span>Connections <span class="font-bold text-dark">150</span></span>
+                                        <span>Showcase <span class="font-bold text-dark">18</span></span>
+                                        <span>Recommends <span class="font-bold text-dark">92</span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div id="company-card-4" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group col-span-1 md:col-span-2 xl:col-span-1">
+                            <a href="companyDetail.html">
+                                <div class="h-52 relative overflow-hidden">
+                                    <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f0475cb4ee-f929bd4a27212d0560c8.png" alt="sleek and professional corporate office lobby" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-thumbs-up text-sm"></i></button>
+                                         <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-share-nodes text-sm"></i></button>
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-bookmark text-sm"></i></button>
+                                    </div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg flex items-center justify-center w-32 h-32">
+                                            <span class="text-5xl font-bold text-primary-600">CB</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-3 lg:p-6">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-dark">Coldwell Banker Properties</h3>
+                                        <div class="flex items-center gap-1 text-gray-400">
+                                            <i class="fa-regular fa-star"></i>
+                                            <span class="text-dark font-semibold text-md">0.0</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">National real estate brokerage with extensive property listings.</p>
+                                    <div class="space-y-3 text-sm text-gray-700 mb-5">
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-location-dot text-primary-500 w-4 text-center"></i>
+                                            <span>Bellville, TX 78901</span>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <i class="fa-solid fa-phone text-primary-500 w-4 text-center"></i>
+                                            <span>(979) 555-0321</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-5">
+                                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1.5 rounded-lg">Real Estate</span>
+                                        <span class="bg-teal-100 text-teal-800 text-xs font-medium px-3 py-1.5 rounded-lg">Listings</span>
+                                    </div>
+                                    <div class="flex items-center justify-center pt-4 border-t border-gray-100 text-xs text-gray-400">
+                                        <span>Not rated yet</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div id="company-card-5" class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group col-span-1 md:col-span-2">
+                            <a href="companyDetail.html">
+                                <div class="h-52 relative overflow-hidden">
+                                    <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/56c7f713c3-ffec7bcda8e93a74ed8a.png" alt="modern and clean hospital reception area with bright lighting" />
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-thumbs-up text-sm"></i></button>
+                                         <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-share-nodes text-sm"></i></button>
+                                        <button class="w-9 h-9 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center text-gray-700 hover:bg-white"><i class="fa-solid fa-bookmark text-sm"></i></button>
+                                    </div>
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
+                                            <img class="w-24 h-24 object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7e631aaa03-57e3b402fe357e684d18.png" alt="HealthFirst Medical Centers logo" />
+                                        </div>
+                                    </div>
+                                    <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
+                                </div>
+                                <div class="p-3 lg:p-6">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-dark">HealthFirst Medical Centers</h3>
+                                        <div class="flex items-center gap-1 text-yellow-500">
+                                            <i class="fa-solid fa-star"></i>
+                                            <span class="text-dark font-semibold text-md">4.8</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-600 text-sm mb-4">Comprehensive healthcare services with multiple locations. Specialized in family medicine, urgent care, and preventive health services.</p>
+                                    <div class="bg-gray-50 rounded-lg p-4 mb-5">
+                                        <h4 class="font-semibold text-sm text-gray-700 mb-3">Branch Locations:</h4>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+                                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-green-600 w-4 text-center"></i><span>Brooklyn Main - (718) 555-0101</span></div>
+                                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-green-600 w-4 text-center"></i><span>Manhattan West - (212) 555-0102</span></div>
+                                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-green-600 w-4 text-center"></i><span>Queens Plaza - (718) 555-0103</span></div>
+                                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-green-600 w-4 text-center"></i><span>Bronx Center - (718) 555-0104</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1.5 rounded-full">Healthcare</span>
+                                        <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1.5 rounded-full">Family Medicine</span>
+                                        <span class="bg-red-100 text-red-700 text-xs font-medium px-3 py-1.5 rounded-full">Urgent Care</span>
+                                        <span class="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1.5 rounded-full">Preventive Care</span>
+                                    </div>
+                                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                                        <div class="flex gap-3">
+                                            <button class="w-10 h-10 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-thumbs-up"></i>
+                                            </button>
+                                            <button class="w-10 h-10 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-bookmark"></i>
+                                            </button>
+                                            <button class="w-10 h-10 bg-primary-50 hover:bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 transition">
+                                                <i class="fa-solid fa-share"></i>
+                                            </button>
+                                        </div>
+                                        <div class="flex gap-6 text-sm text-gray-500">
+                                            <span>Posts: <span class="font-bold text-primary-600">34</span></span>
+                                            <span>Connections: <span class="font-bold text-primary-600">156</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="flex items-center justify-center gap-4 mb-8">
-                    <a href="companiesGrid.html" id="grid-btn" onclick="toggleView('grid')" class="px-6 py-3 bg-primary-600 text-white rounded-xl font-medium shadow-lg">
-                        <i class="fa-solid fa-th mr-2"></i>Grid View
-                    </a>
-                    <a href="companies.html" id="list-btn" onclick="toggleView('list')" class="px-6 py-3 bg-white text-gray-600 rounded-xl font-medium shadow-lg border-2 border-gray-200">
-                        <i class="fa-solid fa-list mr-2"></i>List View
-                    </a>
-                </div>
-
-                <div id="stats-cards" class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-12">
-                    <div class="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-building text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-dark mb-1">247+</div>
-                        <div class="text-gray-600">Active Businesses</div>
-                    </div>
-                    <div class="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                        <div class="w-12 h-12 bg-gradient-to-br from-accent to-emerald-500 rounded-2xl flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-shield-check text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-dark mb-1">89%</div>
-                        <div class="text-gray-600">Verified</div>
-                    </div>
-                    <div class="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-star text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-dark mb-1">4.8</div>
-                        <div class="text-gray-600">Average Rating</div>
-                    </div>
-                    <div class="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
-                            <i class="fa-solid fa-users text-white"></i>
-                        </div>
-                        <div class="text-3xl font-bold text-dark mb-1">12K+</div>
-                        <div class="text-gray-600">Happy Customers</div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="grid-view" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div id="company-card-1" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
-                    <a href="companyDetail.html">
-                        <div class="relative h-48 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-                            <div class="absolute inset-0 bg-black/20"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fcd9efe6ae-dd207965392e80a1566d.png" alt="Allfresh Supermarket">
-                            <div class="absolute top-4 right-4">
-                                <div class="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1 flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span class="font-bold text-dark">4.9</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark mb-2">Allfresh Supermarket</h3>
-                            <p class="text-gray-600 mb-4">Premium grocery store offering fresh produce, organic foods, and gourmet selections for discerning customers.</p>
-                            <div class="flex items-center gap-3 text-sm text-gray-500 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-primary-600"></i>
-                                    <span>Monsey, NY</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-phone text-primary-600"></i>
-                                    <span>(845) 555-0123</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Grocery</span>
-                                <span class="bg-gradient-to-r from-green-100 to-green-200 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Organic</span>
-                                <span class="bg-gradient-to-r from-amber-100 to-amber-200 text-amber-800 text-xs font-medium px-3 py-1 rounded-full">Fresh</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <div class="flex gap-2">
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </button>
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div id="company-card-2" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
-                    <a href="companyDetail.html">
-                        <div class="relative h-48 bg-gradient-to-br from-red-500 to-pink-600 overflow-hidden">
-                            <div class="absolute inset-0 bg-black/20"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/38672f1659-b977581f8d299c784a4e.png" alt="Appletree Supermarket">
-                            <div class="absolute top-4 right-4">
-                                <div class="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1 flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span class="font-bold text-dark">4.8</span>
-                                </div>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark mb-2">Appletree Supermarket</h3>
-                            <p class="text-gray-600 mb-4">Family-owned grocery chain serving fresh quality foods since 1985 with multiple convenient locations.</p>
-                            <div class="bg-gray-50 rounded-2xl p-3 mb-4">
-                                <p class="text-xs text-gray-600 font-semibold mb-1">3 Locations:</p>
-                                <div class="text-xs text-gray-500">Liberty • Monsey • Spring Valley</div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-800 text-xs font-medium px-3 py-1 rounded-full">Supermarket</span>
-                                <span class="bg-gradient-to-r from-purple-100 to-purple-200 text-purple-800 text-xs font-medium px-3 py-1 rounded-full">Family Owned</span>
-                                <span class="bg-gradient-to-r from-yellow-100 to-yellow-200 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full">Multi-Location</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <div class="flex gap-2">
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </button>
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div id="company-card-3" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
-                    <a href="companyDetail.html">
-                        <div class="relative h-48 bg-gradient-to-br from-blue-500 to-teal-600 overflow-hidden">
-                            <div class="absolute inset-0 bg-black/20"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dd8d4a8793-694ec579660576fd998d.png" alt="Artex Property Management">
-                            <div class="absolute top-4 right-4">
-                                <div class="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1 flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span class="font-bold text-dark">4.9</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark mb-2">Artex Property Management</h3>
-                            <p class="text-gray-600 mb-4">Professional property management and real estate services for residential and commercial properties.</p>
-                            <div class="flex items-center gap-3 text-sm text-gray-500 mb-4">
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-primary-600"></i>
-                                    <span>Brooklyn, NY</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-phone text-primary-600"></i>
-                                    <span>(718) 555-0789</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Real Estate</span>
-                                <span class="bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full">Property Mgmt</span>
-                                <span class="bg-gradient-to-r from-cyan-100 to-cyan-200 text-cyan-800 text-xs font-medium px-3 py-1 rounded-full">Rentals</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <div class="flex gap-2">
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </button>
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div id="company-card-4" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
-                    <a href="companyDetail.html">
-                        <div class="relative h-48 bg-gradient-to-br from-gray-500 to-gray-600 overflow-hidden">
-                            <div class="absolute inset-0 bg-black/20"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7e631aaa03-57e3b402fe357e684d18.png" alt="HealthFirst Medical Centers">
-                            <div class="absolute top-4 right-4">
-                                <div class="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1 flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span class="font-bold text-dark">4.8</span>
-                                </div>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark mb-2">HealthFirst Medical Centers</h3>
-                            <p class="text-gray-600 mb-4">Comprehensive healthcare services with multiple locations offering specialized medical care.</p>
-                            <div class="bg-gray-50 rounded-2xl p-3 mb-4">
-                                <p class="text-xs text-gray-600 font-semibold mb-1">4 Locations:</p>
-                                <div class="text-xs text-gray-500">Brooklyn • Manhattan • Queens • Bronx</div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gradient-to-r from-green-100 to-green-200 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Healthcare</span>
-                                <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">Family Medicine</span>
-                                <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-700 text-xs font-medium px-3 py-1 rounded-full">Urgent Care</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <div class="flex gap-2">
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </button>
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div id="company-card-5" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
-                    <a href="companyDetail.html">
-                        <div class="relative h-48 bg-gradient-to-br from-emerald-500 to-teal-600 overflow-hidden">
-                            <div class="absolute inset-0 bg-black/20"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7e631aaa03-57e3b402fe357e684d18.png" alt="HealthFirst Medical Centers">
-                            <div class="absolute top-4 right-4">
-                                <div class="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1 flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span class="font-bold text-dark">4.8</span>
-                                </div>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark mb-2">HealthFirst Medical Centers</h3>
-                            <p class="text-gray-600 mb-4">Comprehensive healthcare services with multiple locations offering specialized medical care.</p>
-                            <div class="bg-gray-50 rounded-2xl p-3 mb-4">
-                                <p class="text-xs text-gray-600 font-semibold mb-1">4 Locations:</p>
-                                <div class="text-xs text-gray-500">Brooklyn • Manhattan • Queens • Bronx</div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gradient-to-r from-green-100 to-green-200 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Healthcare</span>
-                                <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">Family Medicine</span>
-                                <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-700 text-xs font-medium px-3 py-1 rounded-full">Urgent Care</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <div class="flex gap-2">
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </button>
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div id="company-card-6" class="group bg-white rounded-3xl shadow-xl hover:shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
-                    <a href="companyDetail.html">
-                        <div class="relative h-48 bg-gradient-to-br from-indigo-500 to-purple-600 overflow-hidden">
-                            <div class="absolute inset-0 bg-black/20"></div>
-                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7e631aaa03-57e3b402fe357e684d18.png" alt="HealthFirst Medical Centers">
-                            <div class="absolute top-4 right-4">
-                                <div class="bg-white/90 backdrop-blur-sm rounded-xl px-3 py-1 flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-yellow-500"></i>
-                                    <span class="font-bold text-dark">4.8</span>
-                                </div>
-                            </div>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">MULTI-BRANCH</span>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-dark mb-2">HealthFirst Medical Centers</h3>
-                            <p class="text-gray-600 mb-4">Comprehensive healthcare services with multiple locations offering specialized medical care.</p>
-                            <div class="bg-gray-50 rounded-2xl p-3 mb-4">
-                                <p class="text-xs text-gray-600 font-semibold mb-1">4 Locations:</p>
-                                <div class="text-xs text-gray-500">Brooklyn • Manhattan • Queens • Bronx</div>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-gradient-to-r from-green-100 to-green-200 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Healthcare</span>
-                                <span class="bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">Family Medicine</span>
-                                <span class="bg-gradient-to-r from-red-100 to-red-200 text-red-700 text-xs font-medium px-3 py-1 rounded-full">Urgent Care</span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <button class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-medium hover:shadow-lg transition-all">
-                                    <i class="fa-solid fa-eye"></i>
-                                    <span>View Details</span>
-                                </button>
-                                <div class="flex gap-2">
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-heart"></i>
-                                    </button>
-                                    <button class="w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 rounded-xl flex items-center justify-center transition">
-                                        <i class="fa-solid fa-bookmark"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                </main>
             </div>
         </div>
     </div>
