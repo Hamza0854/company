@@ -38,11 +38,11 @@
         <header id="header" class="bg-gradient-to-r from-primary-900 via-primary-700 to-primary-600 relative overflow-hidden">
             <div class="absolute inset-0 bg-black/10"></div>
             <div class="relative z-10 max-w-7xl mx-auto px-3 lg:px-8">
-                <nav id="navbar" class="flex items-center justify-between py-3 lg:py-6">
+                <nav id="navbar" class="flex items-center justify-between py-3 lg:py-4">
                     <div class="flex items-center gap-8">
                         <div class="flex items-center gap-1 lg:gap-3">
                             <a href="companies.html">
-                                <img src="images/HimishlogoGy.png" class="h-6 lg:h-8">
+                                <img src="images/HimishlogoGy.png" class="h-9 lg:h-auto">
                             </a>
                         </div>
                         <!-- <div class="hidden lg:flex items-center gap-6 text-primary-100">
@@ -53,13 +53,13 @@
                     </div>
                     <div class="flex items-center gap-2 lg:gap-4">
                         <div class="relative hidden md:block">
-                            <input type="text" placeholder="Quick search..." class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full py-2 px-4 pr-10 text-white placeholder-white/70 focus:outline-none focus:bg-white/30 transition">
+                            <input type="text" placeholder="Quick search..." class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full py-2 px-4 pr-10 text-white placeholder-[#cdcdcd] focus:outline-none focus:bg-white/30 transition font-light">
                             <i class="fa-solid fa-search absolute right-3 top-1/2 -translate-y-1/2 text-white/70"></i>
                         </div>
                         <button class="px-4 lg:px-6 py-2.5 bg-accent text-white font-semibold rounded-full hover:bg-amber-500 transition-colors duration-300 text-sm lg:text-md">
                             Add Business
                         </button>
-                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-white/50 object-cover">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-white/75 object-cover">
                     </div>
                 </nav>
             </div>
@@ -76,21 +76,51 @@
             </div>
         </div>
 
-        <div id="company-hero" class="bg-blue-50 py-12">
+        <div id="company-hero" class="bg-[#EEF5FE] py-4">
             <div class="max-w-7xl mx-auto px-3 sm:px-8">
-                <div class="sm:flex items-center gap-8 w-full">
+                <div class="sm:flex gap-8 w-full">
                     <div class="flex-shrink-0">
-                        <div class="w-36 h-36 bg-white rounded-3xl shadow-lg flex items-center justify-center p-4 border-4 border-white">
+                        <div class="w-[85px] h-[85px] sm:w-36 sm:h-36 bg-white rounded-lg sm:rounded-3xl shadow-lg flex items-center justify-center p-1 sm:p-4 border-4 border-white">
                             <img class="w-full h-full object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6df7ee146c-5253455617ded5452fa1.png" alt="light green square logo with the word Allfresh in white, minimalist design">
                         </div>
                     </div>
                     <div class="flex-1 mt-6 sm:mt-0">
                         <div class="sm:flex justify-between items-start mb-2">
                             <div>
-                                <h1 class="text-4xl font-bold text-dark">Allfresh Supermarket</h1>
+                                <h1 class="text-2xl lg:text-4xl font-bold text-dark">Allfresh Supermarket</h1>
+                                <p class="text-[#6B7280] mb-3">@allfresh_supermarket</p>
+                                <p class="text-sm sm:text-md text-gray-600 mb-2 max-w-2xl">Premium grocery store offering fresh produce, organic foods, and gourmet selections</p>
+                                <div class="flex flex-wrap items-center gap-2 lg:gap-6 text-gray-700 text-sm sm:text-md mb-6">
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-solid fa-location-dot text-primary-600"></i>
+                                        <span>Monsey, NY 10952</span>
+                                    </span>
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-solid fa-phone text-primary-600"></i>
+                                        <span>(845) 555-0123</span>
+                                    </span>
+                                    <span class="flex items-center gap-2">
+                                        <i class="fa-solid fa-clock text-primary-600"></i>
+                                        <span>Open until 10 PM</span>
+                                    </span>
+                                </div>
+                                <div class="flex items-center gap-3 mt-4">
+                                    <button class="px-2 sm:px-5 py-2.5 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition flex items-center gap-2 text-sm">
+                                        <i class="fa-regular fa-message"></i> Chat
+                                    </button>
+                                    <button class="px-2 sm:px-3 py-2.5 bg-[#004A90] text-white font-semibold rounded-lg hover:bg-[#035aad] transition flex items-center gap-2 text-sm">
+                                        <i class="fa-solid fa-link"></i> Connect
+                                    </button>
+                                    <button class="w-11 h-11 bg-white text-gray-600 rounded-lg hover:bg-gray-200 transition flex items-center justify-center border border-[#E5E7EB]">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                    <button class="w-11 h-11 bg-white text-gray-600 rounded-lg hover:bg-gray-200 transition flex items-center justify-center border border-[#E5E7EB]">
+                                        <i class="fa-solid fa-share"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="text-right flex-shrink-0">
-                                <div class="flex items-center gap-2 mb-1 justify-end">
+                            <div class="flex-shrink-0 mt-4 lg:mt-0">
+                                <div class="flex items-center gap-2 mb-1 lg:justify-end">
                                     <div class="flex text-yellow-400 text-xl">
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
@@ -99,42 +129,18 @@
                                         <i class="fa-solid fa-star-half-alt"></i>
                                     </div>
                                     <span class="text-2xl font-bold text-dark ml-1">4.9</span>
+                                    <p class="text-gray-600 text-sm">(245 reviews)</p>
                                 </div>
-                                <p class="text-gray-600 text-sm">245 reviews</p>
+                                <div class="mt-3 lg:mt-14"> 
+                                    <button class="px-2 sm:px-5 py-2.5 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition flex items-center gap-2 text-md">
+                                        <i class="fa-solid fa-building"></i> Claim
+                                    </button>
+                                    <p class="text-sm mt-2">Own this company?</p>
+                                    <a href="#" class="text-sm text-primary-600 leading-3 block">Claim it Now</a>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-md text-gray-600 mb-4 max-w-2xl">Premium grocery store offering fresh produce, organic foods, and gourmet selections</p>
-                        <div class="flex items-center gap-6 text-gray-700 text-sm mb-6">
-                            <span class="flex items-center gap-2">
-                                <i class="fa-solid fa-location-dot text-primary-600"></i>
-                                <span>Monsey, NY 10952</span>
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i class="fa-solid fa-phone text-primary-600"></i>
-                                <span>(845) 555-0123</span>
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <i class="fa-solid fa-clock text-primary-600"></i>
-                                <span>Open until 10 PM</span>
-                            </span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <button class="px-2 sm:px-5 py-2.5 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition flex items-center gap-2 text-sm">
-                                <i class="fa-solid fa-phone"></i> Call
-                            </button>
-                            <button class="px-2 sm:px-5 py-2.5 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition flex items-center gap-2 text-sm">
-                                <i class="fa-solid fa-link"></i> Connect
-                            </button>
-                            <button class="px-2 sm:px-5 py-2.5 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 transition flex items-center gap-2 text-sm">
-                                <i class="fa-solid fa-building"></i> Claim
-                            </button>
-                            <button class="w-11 h-11 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition flex items-center justify-center">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="w-11 h-11 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition flex items-center justify-center">
-                                <i class="fa-solid fa-share"></i>
-                            </button>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -143,23 +149,400 @@
         <div id="main-content" class="max-w-7xl mx-auto px-3 sm:px-8 py-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
                 <div id="left-column" class="col-span-2 space-y-8">
-                    <div id="about-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
-                        <h2 class="text-2xl font-bold text-dark mb-6">About Allfresh Supermarket</h2>
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            Allfresh Supermarket has been serving the Monsey community for over 15 years with premium quality groceries and exceptional customer service. We pride ourselves on offering the freshest produce, highest quality organic foods, and an extensive selection of gourmet items to meet all your culinary needs.
-                        </p>
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            Our commitment to excellence extends beyond our products to our dedicated team members who are always ready to assist you in finding exactly what you need. We source our products from trusted suppliers and maintain the highest standards of quality and freshness.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">Grocery Store</span>
-                            <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full">Organic Products</span>
-                            <span class="bg-amber-100 text-amber-800 text-sm font-semibold px-4 py-2 rounded-full">Fresh Produce</span>
-                            <span class="bg-teal-100 text-teal-800 text-sm font-semibold px-4 py-2 rounded-full">Gourmet</span>
-                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold px-4 py-2 rounded-full">Family Owned</span>
+                    <!-- SELECT BRANCH -->
+                    <div id="photos-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-xl sm:text-2xl font-bold text-dark">Select Branch</h2>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <i class="fa-solid fa-map-marker-alt text-primary-600"></i>
+                                <span>3 Branches Available</span>
+                            </div>
+                        </div>
+        
+                        <div id="branch-selector" class="mb-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <button class="branch-btn active p-3 bg-primary-50 border-2 border-primary-600 rounded-lg text-left transition">
+                                    <div class="font-semibold text-primary-700">Main Store</div>
+                                    <div class="text-sm text-primary-600">123 Main St, Monsey</div>
+                                    <div class="text-xs text-primary-500 mt-1">Open until 10 PM</div>
+                                </button>
+                                <button class="branch-btn p-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-left hover:border-primary-300 transition">
+                                    <div class="font-semibold text-gray-700">Liberty Branch</div>
+                                    <div class="text-sm text-gray-600">456 Liberty Ave</div>
+                                    <div class="text-xs text-gray-500 mt-1">Open until 9 PM</div>
+                                </button>
+                                <button class="branch-btn p-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-left hover:border-primary-300 transition">
+                                    <div class="font-semibold text-gray-700">Spring Valley</div>
+                                    <div class="text-sm text-gray-600">789 Route 59</div>
+                                    <div class="text-xs text-gray-500 mt-1">Open until 11 PM</div>
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    <!-- GALLERY -->
+                    <div id="photos-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-2xl font-bold text-dark">Gallery &amp; Info</h2>
+                        </div>
+        
 
+                        <div id="tab-navigation" class="border-b border-gray-200 mb-6">
+                            <nav class="flex gap-4 sm:gap-8 flex-wrap sm:flex-nowrap">
+                                <button class="tab-btn active pb-4 px-2 text-primary-600 border-b-2 border-primary-600 font-semibold transition">
+                                    <i class="fa-solid fa-images mr-2"></i>Showcase
+                                </button>
+                                <button class="tab-btn pb-4 px-2 text-gray-500 hover:text-primary-600 font-semibold transition">
+                                    <i class="fa-solid fa-newspaper mr-2"></i>Posts
+                                </button>
+                                <button class="tab-btn pb-4 px-2 text-gray-500 hover:text-primary-600 font-semibold transition">
+                                    <i class="fa-solid fa-users mr-2"></i>Team
+                                </button>
+                                <button class="tab-btn pb-4 px-2 text-gray-500 hover:text-primary-600 font-semibold transition">
+                                    <i class="fa-solid fa-thumbs-up mr-2"></i>Recommends
+                                </button>
+                            </nav>
+                        </div>
+
+                        <div id="tab-content">
+                            <div id="showcase-tab" class="tab-panel active">
+                                <div class="grid grid-cols-3 gap-4 mb-6">
+                                    <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e3d69331c-3267af13427d3e06d20a.png" alt="modern supermarket interior, fresh produce section, bright lighting, clean aisles">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0309ddb880-0e8f992fb2326b85f6d2.png" alt="grocery store deli counter, fresh meats and cheeses display, professional setup">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a2883aca83-b7c0111b1e0702675272.png" alt="organic produce section, colorful fruits and vegetables, premium quality">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f5a7ca61a4-09ecd1270cd4598094fc.png" alt="supermarket checkout area, modern POS systems, clean professional environment">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f90664a925-6f80c57944efd922d70c.png" alt="grocery store bakery section, fresh bread and pastries display">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+                                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a2cd0ea1b0-7d05260a68af4af5ee4d.png" alt="supermarket exterior view, modern storefront, parking area, professional signage">
+                                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                            <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="w-full py-3 border border-gray-300 text-dark font-semibold rounded-lg hover:bg-gray-50 transition">
+                                    <i class="fa-solid fa-images mr-2"></i>View All Photos (24)
+                                </button>
+                            </div>
+
+                            <div id="posts-tab" class="tab-panel hidden">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                                <div class="post-card bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                                                    <div class="relative">
+                                                        <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8e95f82c76-19973c595902e0de0a36.png" alt="promotional graphic for a supermarket,">
+                                                        <div class="absolute top-3 right-3 flex items-center gap-2 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm">
+                                                            <i class="fa-solid fa-images"></i>
+                                                            <span>4</span>
+                                                            <div class="w-px h-4 bg-white/30"></div>
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-5">
+                                                        <div class="flex items-center gap-2 mb-2">
+                                                            <h3 class="font-bold text-lg text-dark">Allfresh Supermarket</h3>
+                                                            <i class="fa-solid fa-check-circle text-blue-500"></i>
+                                                        </div>
+                                                        <p class="text-sm text-gray-500 mb-3">1 day ago</p>
+                                                        <p class="font-semibold text-gray-800 mb-4">The Glow of Freshness</p>
+                                                        <div class="flex flex-wrap gap-2 mb-5">
+                                                            <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">fresh produce</span>
+                                                            <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">organic</span>
+                                                            <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">healthy living</span>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-gray-500">
+                                                            <div class="flex items-center gap-4">
+                                                                <button class="hover:text-red-500 transition-colors"><i class="fa-regular fa-heart text-xl"></i></button>
+                                                                <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-comment text-xl"></i></button>
+                                                                <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-paper-plane text-xl"></i></button>
+                                                            </div>
+                                                            <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-card bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                                                    <div class="relative">
+                                                        <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ca36a4c155-bf2f4397f56d353e7da6.png" alt="grand opening celebration, supermarket exterior, balloons and banners, customers shopping, vibrant and cheerful">
+                                                        <div class="absolute top-3 right-3 flex items-center gap-2 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm">
+                                                            <i class="fa-solid fa-images"></i>
+                                                            <span>8</span>
+                                                            <div class="w-px h-4 bg-white/30"></div>
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-5">
+                                                        <div class="flex items-center gap-2 mb-2">
+                                                            <h3 class="font-bold text-lg text-dark">Allfresh Supermarket</h3>
+                                                            <i class="fa-solid fa-check-circle text-blue-500"></i>
+                                                        </div>
+                                                        <p class="text-sm text-gray-500 mb-3">2 days ago</p>
+                                                        <p class="font-semibold text-gray-800 mb-4">🎉 Grand Opening of Spring Valley!</p>
+                                                        <div class="flex flex-wrap gap-2 mb-5">
+                                                            <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">grand opening</span>
+                                                            <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">community</span>
+                                                            <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">special offer</span>
+                                                        </div>
+                                                        <div class="flex items-center justify-between text-gray-500">
+                                                            <div class="flex items-center gap-4">
+                                                                <button class="hover:text-red-500 transition-colors"><i class="fa-regular fa-heart text-xl"></i></button>
+                                                                <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-comment text-xl"></i></button>
+                                                                <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-paper-plane text-xl"></i></button>
+                                                            </div>
+                                                            <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                </div>
+                            </div>
+
+                            <div id="team-tab" class="tab-panel hidden">
+                                <!-- User view -->
+                                <div class="rounded-lg p-6 bg-slate-50">
+                                    <div class="sm:flex items-center justify-between mb-6">
+                                                    <h3 class="text-xl font-semibold text-slate-800">Team Members: 5</h3>
+                                                    <button class="text-red-500 font-semibold flex items-center gap-2 hover:text-red-600 transition">
+                                                        Raise Dispute
+                                                        <i class="fa-regular fa-comment-dots text-lg"></i>
+                                                    </button>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                                    <div id="team-member-1" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
+                                                        <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+                                                            <i class="fa-solid fa-check text-sm"></i>
+                                                        </div>
+                                                        <div class="absolute top-3 right-3 text-gray-400">
+                                                            <i class="fa-solid fa-user-shield text-lg"></i>
+                                                        </div>
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-slate-100" alt="James Marco">
+                                                        <h4 class="font-bold text-slate-800 text-lg">James Marco</h4>
+                                                        <p class="text-gray-500">Owner</p>
+                                                    </div>
+                                                    <div id="team-member-2" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
+                                                        <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+                                                            <i class="fa-solid fa-check text-sm"></i>
+                                                        </div>
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-slate-100" alt="Noah Reynolds">
+                                                        <h4 class="font-bold text-slate-800 text-lg">Noah Reynolds</h4>
+                                                        <p class="text-gray-500">Manager</p>
+                                                    </div>
+                                                    <div id="team-member-3" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
+                                                        <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+                                                            <i class="fa-solid fa-check text-sm"></i>
+                                                        </div>
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-9.jpg" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-slate-100" alt="Alen Rosel">
+                                                        <h4 class="font-bold text-slate-800 text-lg">Alen Rosel</h4>
+                                                        <p class="text-gray-500">Sales Person</p>
+                                                    </div>
+                                                    <div id="team-member-4" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
+                                                        <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+                                                            <i class="fa-solid fa-check text-sm"></i>
+                                                        </div>
+                                                        <div class="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-slate-100 overflow-hidden">
+                                                           <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c386cd7f41-3b09aea5bc7e7540632a.png" alt="a man on a jet ski, action shot, vibrant colors, professional photography">
+                                                        </div>
+                                                        <h4 class="font-bold text-slate-800 text-lg">Jackson Pierce</h4>
+                                                        <p class="text-gray-500">Employee</p>
+                                                    </div>
+                                                    <div id="team-member-5" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
+                                                        <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
+                                                            <i class="fa-solid fa-check text-sm"></i>
+                                                        </div>
+                                                        <div class="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-slate-100 flex items-center justify-center bg-orange-50">
+                                                           <img class="w-16 h-16" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/24a9ef31d2-ccbf957853c1bdd4d261.png" alt="an intricate orange mandala logo, clean lines, vector art">
+                                                        </div>
+                                                        <h4 class="font-bold text-slate-800 text-lg">Penelope Marsh</h4>
+                                                        <p class="text-gray-500">Employee</p>
+                                                    </div>
+                                    </div>
+                                </div>
+                                <!-- Admin view -->
+                                <div class="space-y-3 mt-8">
+                                    <h2 class="text-xl font-semibold text-slate-800">For Admin Interface</h2>
+                                                <div id="team-member-1" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
+                                                    <div class="flex items-center gap-4">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="James Marco">
+                                                        <div>
+                                                            <div class="flex items-center gap-2">
+                                                                <h3 class="font-semibold text-lg text-dark">James Marco</h3>
+                                                                <i class="fa-solid fa-check-circle text-indigo-500"></i>
+                                                            </div>
+                                                            <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Owner (Me)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="team-member-2" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
+                                                    <div class="flex items-center gap-4">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-12 h-12 rounded-full object-cover" alt="Noah Reynolds">
+                                                        <div>
+                                                            <div class="flex items-center gap-2">
+                                                                <h3 class="font-semibold text-lg text-dark">Noah Reynolds</h3>
+                                                                <i class="fa-solid fa-check-circle text-indigo-500"></i>
+                                                            </div>
+                                                            <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Manager</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 mt-5 lg:mt-0">
+                                                        <button class="px-4 py-1.5 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition">Remove</button>
+                                                        <button class="px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">Make Admin</button>
+                                                    </div>
+                                                </div>
+                                                <div id="team-member-3" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
+                                                    <div class="flex items-center gap-4">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" class="w-12 h-12 rounded-full object-cover" alt="Olivia Chen">
+                                                        <div>
+                                                            <div class="flex items-center gap-2">
+                                                                <h3 class="font-semibold text-lg text-dark">Olivia Chen</h3>
+                                                                <i class="fa-solid fa-check-circle text-indigo-500"></i>
+                                                            </div>
+                                                            <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Cashier</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 mt-5 lg:mt-0">
+                                                        <button class="px-4 py-1.5 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition">Remove</button>
+                                                        <button class="px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">Make Admin</button>
+                                                    </div>
+                                                </div>
+                                                <div id="team-member-4" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
+                                                    <div class="flex items-center gap-4">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" class="w-12 h-12 rounded-full object-cover" alt="Liam Rodriguez">
+                                                        <div>
+                                                            <div class="flex items-center gap-2">
+                                                                <h3 class="font-semibold text-lg text-dark">Liam Rodriguez</h3>
+                                                            </div>
+                                                            <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Stocker</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center gap-2 mt-5 lg:mt-0">
+                                                        <button class="px-4 py-1.5 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition">Remove</button>
+                                                        <button class="px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">Make Admin</button>
+                                                    </div>
+                                                </div>
+                                </div>
+                            </div>
+
+                            <div id="recommends-tab" class="tab-panel hidden">
+                                <h2 class="text-xl font-semibold text-slate-800">For User Interface</h2>
+                                <div class="space-y-2">
+                                                <div id="recommendation-1" class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-12 h-12 rounded-full object-cover" alt="Erika Keegan">
+                                                    <div class="ml-4">
+                                                        <h3 class="font-semibold text-dark text-lg">Erika Keegan</h3>
+                                                        <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                            <span>just now</span>
+                                                            <i class="fa-solid fa-user-plus text-xs"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="recommendation-2" class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="Scott Collins">
+                                                    <div class="ml-4">
+                                                        <h3 class="font-semibold text-dark text-lg">Scott Collins</h3>
+                                                        <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                            <span>2m ago</span>
+                                                            <i class="fa-solid fa-user-plus text-xs"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="recommendation-3" class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg" class="w-12 h-12 rounded-full object-cover" alt="Victoria Sharp">
+                                                    <div class="ml-4">
+                                                        <h3 class="font-semibold text-dark text-lg">Victoria Sharp</h3>
+                                                        <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                            <span>4m ago</span>
+                                                            <i class="fa-solid fa-user-plus text-xs"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                </div>
+                                <h2 class="text-xl font-semibold text-slate-800 mt-8 mb-2">For Admin Interface</h2>
+                                <div class="space-y-2">
+                                                <div id="recommendation-1" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <div class="flex items-center">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-12 h-12 rounded-full object-cover" alt="Erika Keegan">
+                                                        <div class="ml-4">
+                                                            <h3 class="font-semibold text-dark text-lg">Erika Keegan</h3>
+                                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                                <span>6m ago</span>
+                                                                <i class="fa-solid fa-user-plus text-xs"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="appreciation-btn appreciated p-2 rounded-full transform transition-transform duration-150">
+                                                        <i class="fa-regular fa-hand text-2xl"></i>
+                                                    </button>
+                                                </div>
+                                                <div id="recommendation-2" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <div class="flex items-center">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="Scott Collins">
+                                                        <div class="ml-4">
+                                                            <h3 class="font-semibold text-dark text-lg">Scott Collins</h3>
+                                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                                <span>7m ago</span>
+                                                                <i class="fa-solid fa-user-plus text-xs"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="appreciation-btn p-2 rounded-full transform transition-transform duration-150">
+                                                        <i class="fa-regular fa-hand text-2xl text-gray-400 hover:text-violet-500 transition-colors"></i>
+                                                    </button>
+                                                </div>
+                                                <div id="recommendation-3" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <div class="flex items-center">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg" class="w-12 h-12 rounded-full object-cover" alt="Victoria Sharp">
+                                                        <div class="ml-4">
+                                                            <h3 class="font-semibold text-dark text-lg">Victoria Sharp</h3>
+                                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                                <span>15m ago</span>
+                                                                <i class="fa-solid fa-user-plus text-xs"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="appreciation-btn p-2 rounded-full transform transition-transform duration-150">
+                                                        <i class="fa-regular fa-hand text-2xl text-gray-400 hover:text-violet-500 transition-colors"></i>
+                                                    </button>
+                                                </div>
+                                                 <div id="recommendation-4" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
+                                                    <div class="flex items-center">
+                                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-12 h-12 rounded-full object-cover" alt="John Doe">
+                                                        <div class="ml-4">
+                                                            <h3 class="font-semibold text-dark text-lg">John Doe</h3>
+                                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
+                                                                <span>22m ago</span>
+                                                                <i class="fa-solid fa-user-plus text-xs"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="appreciation-btn p-2 rounded-full transform transition-transform duration-150">
+                                                        <i class="fa-regular fa-hand text-2xl text-gray-400 hover:text-violet-500 transition-colors"></i>
+                                                    </button>
+                                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- HOURS OF OPERATION -->
                     <div id="hours-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
                         <h2 class="text-2xl font-bold text-dark mb-6">Hours of Operation</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -204,514 +587,99 @@
                             </div>
                         </div>
                     </div>
-
-                    <div id="photos-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
-            <div class="flex items-center justify-between mb-6">
-                <h2 class="text-2xl font-bold text-dark">Gallery &amp; Info</h2>
-                <div class="flex items-center gap-2 text-sm text-gray-600">
-                    <i class="fa-solid fa-map-marker-alt text-primary-600"></i>
-                    <span>3 Branches Available</span>
-                </div>
-            </div>
-        
-            <div id="branch-selector" class="mb-6">
-                <div class="flex items-center gap-2 mb-4">
-                    <i class="fa-solid fa-store text-primary-600"></i>
-                    <span class="font-semibold text-dark">Select Branch:</span>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <button class="branch-btn active p-3 bg-primary-50 border-2 border-primary-600 rounded-lg text-left transition">
-                        <div class="font-semibold text-primary-700">Main Store</div>
-                        <div class="text-sm text-primary-600">123 Main St, Monsey</div>
-                        <div class="text-xs text-primary-500 mt-1">Open until 10 PM</div>
-                    </button>
-                    <button class="branch-btn p-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-left hover:border-primary-300 transition">
-                        <div class="font-semibold text-gray-700">Liberty Branch</div>
-                        <div class="text-sm text-gray-600">456 Liberty Ave</div>
-                        <div class="text-xs text-gray-500 mt-1">Open until 9 PM</div>
-                    </button>
-                    <button class="branch-btn p-3 bg-gray-50 border-2 border-gray-200 rounded-lg text-left hover:border-primary-300 transition">
-                        <div class="font-semibold text-gray-700">Spring Valley</div>
-                        <div class="text-sm text-gray-600">789 Route 59</div>
-                        <div class="text-xs text-gray-500 mt-1">Open until 11 PM</div>
-                    </button>
-                </div>
-            </div>
-
-            <div id="tab-navigation" class="border-b border-gray-200 mb-6">
-                <nav class="flex gap-4 sm:gap-8 flex-wrap sm:flex-nowrap">
-                    <button class="tab-btn active pb-4 px-2 text-primary-600 border-b-2 border-primary-600 font-semibold transition">
-                        <i class="fa-solid fa-images mr-2"></i>Showcase
-                    </button>
-                    <button class="tab-btn pb-4 px-2 text-gray-500 hover:text-primary-600 font-semibold transition">
-                        <i class="fa-solid fa-newspaper mr-2"></i>Posts
-                    </button>
-                    <button class="tab-btn pb-4 px-2 text-gray-500 hover:text-primary-600 font-semibold transition">
-                        <i class="fa-solid fa-users mr-2"></i>Team
-                    </button>
-                    <button class="tab-btn pb-4 px-2 text-gray-500 hover:text-primary-600 font-semibold transition">
-                        <i class="fa-solid fa-thumbs-up mr-2"></i>Recommends
-                    </button>
-                </nav>
-            </div>
-
-            <div id="tab-content">
-                <div id="showcase-tab" class="tab-panel active">
-                    <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6e3d69331c-3267af13427d3e06d20a.png" alt="modern supermarket interior, fresh produce section, bright lighting, clean aisles">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
-                            </div>
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0309ddb880-0e8f992fb2326b85f6d2.png" alt="grocery store deli counter, fresh meats and cheeses display, professional setup">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
-                            </div>
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a2883aca83-b7c0111b1e0702675272.png" alt="organic produce section, colorful fruits and vegetables, premium quality">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
-                            </div>
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f5a7ca61a4-09ecd1270cd4598094fc.png" alt="supermarket checkout area, modern POS systems, clean professional environment">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
-                            </div>
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f90664a925-6f80c57944efd922d70c.png" alt="grocery store bakery section, fresh bread and pastries display">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
-                            </div>
-                        </div>
-                        <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
-                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a2cd0ea1b0-7d05260a68af4af5ee4d.png" alt="supermarket exterior view, modern storefront, parking area, professional signage">
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                                <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 text-2xl transition-opacity"></i>
-                            </div>
+                    <!-- ABOUT -->
+                    <div id="about-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
+                        <h2 class="text-2xl font-bold text-dark mb-6">About Allfresh Supermarket</h2>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Allfresh Supermarket has been serving the Monsey community for over 15 years with premium quality groceries and exceptional customer service. We pride ourselves on offering the freshest produce, highest quality organic foods, and an extensive selection of gourmet items to meet all your culinary needs.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Our commitment to excellence extends beyond our products to our dedicated team members who are always ready to assist you in finding exactly what you need. We source our products from trusted suppliers and maintain the highest standards of quality and freshness.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-4 py-2 rounded-full">Grocery Store</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-semibold px-4 py-2 rounded-full">Organic Products</span>
+                            <span class="bg-amber-100 text-amber-800 text-sm font-semibold px-4 py-2 rounded-full">Fresh Produce</span>
+                            <span class="bg-teal-100 text-teal-800 text-sm font-semibold px-4 py-2 rounded-full">Gourmet</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-semibold px-4 py-2 rounded-full">Family Owned</span>
                         </div>
                     </div>
-                    <button class="w-full py-3 border border-gray-300 text-dark font-semibold rounded-lg hover:bg-gray-50 transition">
-                        <i class="fa-solid fa-images mr-2"></i>View All Photos (24)
-                    </button>
-                </div>
-
-                <div id="posts-tab" class="tab-panel hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div class="post-card bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                                        <div class="relative">
-                                            <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8e95f82c76-19973c595902e0de0a36.png" alt="promotional graphic for a supermarket,">
-                                            <div class="absolute top-3 right-3 flex items-center gap-2 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm">
-                                                <i class="fa-solid fa-images"></i>
-                                                <span>4</span>
-                                                <div class="w-px h-4 bg-white/30"></div>
-                                                <i class="fa-solid fa-ellipsis"></i>
-                                            </div>
-                                        </div>
-                                        <div class="p-5">
-                                            <div class="flex items-center gap-2 mb-2">
-                                                <h3 class="font-bold text-lg text-dark">Allfresh Supermarket</h3>
-                                                <i class="fa-solid fa-check-circle text-blue-500"></i>
-                                            </div>
-                                            <p class="text-sm text-gray-500 mb-3">1 day ago</p>
-                                            <p class="font-semibold text-gray-800 mb-4">The Glow of Freshness</p>
-                                            <div class="flex flex-wrap gap-2 mb-5">
-                                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">fresh produce</span>
-                                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">organic</span>
-                                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">healthy living</span>
-                                            </div>
-                                            <div class="flex items-center justify-between text-gray-500">
-                                                <div class="flex items-center gap-4">
-                                                    <button class="hover:text-red-500 transition-colors"><i class="fa-regular fa-heart text-xl"></i></button>
-                                                    <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-comment text-xl"></i></button>
-                                                    <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-paper-plane text-xl"></i></button>
+                    <!-- REVIEW -->
+                    <div id="reviews-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
+                                <h2 class="text-2xl font-bold text-dark mb-6">Customer Reviews</h2>
+                                <div class="space-y-6">
+                                    <div class="border-b border-gray-100 pb-6">
+                                        <div class="flex items-start gap-4">
+                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="Reviewer" class="w-12 h-12 rounded-full object-cover">
+                                            <div class="flex-1">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <h4 class="font-semibold text-dark">Sarah Johnson</h4>
+                                                    <div class="flex text-yellow-400">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span class="text-sm text-gray-500">2 days ago</span>
                                                 </div>
-                                                <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                                <p class="text-gray-700 leading-relaxed">
+                                                    Excellent service and quality products! The produce is always fresh and the staff is incredibly helpful. I've been shopping here for years and they never disappoint.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="post-card bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
-                                        <div class="relative">
-                                            <img class="w-full h-64 object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ca36a4c155-bf2f4397f56d353e7da6.png" alt="grand opening celebration, supermarket exterior, balloons and banners, customers shopping, vibrant and cheerful">
-                                            <div class="absolute top-3 right-3 flex items-center gap-2 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-sm">
-                                                <i class="fa-solid fa-images"></i>
-                                                <span>8</span>
-                                                <div class="w-px h-4 bg-white/30"></div>
-                                                <i class="fa-solid fa-ellipsis"></i>
-                                            </div>
-                                        </div>
-                                        <div class="p-5">
-                                            <div class="flex items-center gap-2 mb-2">
-                                                <h3 class="font-bold text-lg text-dark">Allfresh Supermarket</h3>
-                                                <i class="fa-solid fa-check-circle text-blue-500"></i>
-                                            </div>
-                                            <p class="text-sm text-gray-500 mb-3">2 days ago</p>
-                                            <p class="font-semibold text-gray-800 mb-4">🎉 Grand Opening of Spring Valley!</p>
-                                            <div class="flex flex-wrap gap-2 mb-5">
-                                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">grand opening</span>
-                                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">community</span>
-                                                <span class="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">special offer</span>
-                                            </div>
-                                            <div class="flex items-center justify-between text-gray-500">
-                                                <div class="flex items-center gap-4">
-                                                    <button class="hover:text-red-500 transition-colors"><i class="fa-regular fa-heart text-xl"></i></button>
-                                                    <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-comment text-xl"></i></button>
-                                                    <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-paper-plane text-xl"></i></button>
+                                    <div class="border-b border-gray-100 pb-6">
+                                        <div class="flex items-start gap-4">
+                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="Reviewer" class="w-12 h-12 rounded-full object-cover">
+                                            <div class="flex-1">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <h4 class="font-semibold text-dark">Michael Chen</h4>
+                                                    <div class="flex text-yellow-400">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <span class="text-sm text-gray-500">1 week ago</span>
                                                 </div>
-                                                <button class="hover:text-primary-600 transition-colors"><i class="fa-regular fa-bookmark text-xl"></i></button>
+                                                <p class="text-gray-700 leading-relaxed">
+                                                    Great selection of organic products and the deli section is outstanding. Prices are reasonable for the quality you get. Highly recommended!
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                    </div>
-                </div>
-
-                <div id="team-tab" class="tab-panel hidden">
-                    <!-- User view -->
-                    <div class="rounded-lg p-6 bg-slate-50">
-                        <div class="sm:flex items-center justify-between mb-6">
-                                        <h3 class="text-xl font-semibold text-slate-800">Team Members: 5</h3>
-                                        <button class="text-red-500 font-semibold flex items-center gap-2 hover:text-red-600 transition">
-                                            Raise Dispute
-                                            <i class="fa-regular fa-comment-dots text-lg"></i>
-                                        </button>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                                        <div id="team-member-1" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
-                                            <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
-                                                <i class="fa-solid fa-check text-sm"></i>
-                                            </div>
-                                            <div class="absolute top-3 right-3 text-gray-400">
-                                                <i class="fa-solid fa-user-shield text-lg"></i>
-                                            </div>
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-slate-100" alt="James Marco">
-                                            <h4 class="font-bold text-slate-800 text-lg">James Marco</h4>
-                                            <p class="text-gray-500">Owner</p>
-                                        </div>
-                                        <div id="team-member-2" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
-                                            <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
-                                                <i class="fa-solid fa-check text-sm"></i>
-                                            </div>
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-slate-100" alt="Noah Reynolds">
-                                            <h4 class="font-bold text-slate-800 text-lg">Noah Reynolds</h4>
-                                            <p class="text-gray-500">Manager</p>
-                                        </div>
-                                        <div id="team-member-3" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
-                                            <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
-                                                <i class="fa-solid fa-check text-sm"></i>
-                                            </div>
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-9.jpg" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-slate-100" alt="Alen Rosel">
-                                            <h4 class="font-bold text-slate-800 text-lg">Alen Rosel</h4>
-                                            <p class="text-gray-500">Sales Person</p>
-                                        </div>
-                                        <div id="team-member-4" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
-                                            <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
-                                                <i class="fa-solid fa-check text-sm"></i>
-                                            </div>
-                                            <div class="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-slate-100 overflow-hidden">
-                                               <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c386cd7f41-3b09aea5bc7e7540632a.png" alt="a man on a jet ski, action shot, vibrant colors, professional photography">
-                                            </div>
-                                            <h4 class="font-bold text-slate-800 text-lg">Jackson Pierce</h4>
-                                            <p class="text-gray-500">Employee</p>
-                                        </div>
-                                        <div id="team-member-5" class="bg-white rounded-xl shadow-sm p-6 text-center relative border border-gray-100">
-                                            <div class="absolute top-3 left-3 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center">
-                                                <i class="fa-solid fa-check text-sm"></i>
-                                            </div>
-                                            <div class="h-24 w-24 mx-auto mb-4 rounded-full border-4 border-slate-100 flex items-center justify-center bg-orange-50">
-                                               <img class="w-16 h-16" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/24a9ef31d2-ccbf957853c1bdd4d261.png" alt="an intricate orange mandala logo, clean lines, vector art">
-                                            </div>
-                                            <h4 class="font-bold text-slate-800 text-lg">Penelope Marsh</h4>
-                                            <p class="text-gray-500">Employee</p>
-                                        </div>
-                        </div>
-                    </div>
-                    <!-- Admin view -->
-                    <div class="space-y-3 mt-8">
-                        <h2 class="text-xl font-semibold text-slate-800">For Admin Interface</h2>
-                                    <div id="team-member-1" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
-                                        <div class="flex items-center gap-4">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="James Marco">
-                                            <div>
-                                                <div class="flex items-center gap-2">
-                                                    <h3 class="font-semibold text-lg text-dark">James Marco</h3>
-                                                    <i class="fa-solid fa-check-circle text-indigo-500"></i>
+                                    <div>
+                                        <div class="flex items-start gap-4">
+                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="Reviewer" class="w-12 h-12 rounded-full object-cover">
+                                            <div class="flex-1">
+                                                <div class="flex items-center gap-3 mb-2">
+                                                    <h4 class="font-semibold text-dark">Emily Rodriguez</h4>
+                                                    <div class="flex text-yellow-400">
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                    </div>
+                                                    <span class="text-sm text-gray-500">2 weeks ago</span>
                                                 </div>
-                                                <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Owner (Me)</p>
+                                                <p class="text-gray-700 leading-relaxed">
+                                                    Clean store with a good variety of products. The checkout process is always quick and efficient. The only minor issue is parking can be tight during peak hours.
+                                                </p>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="team-member-2" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
-                                        <div class="flex items-center gap-4">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-12 h-12 rounded-full object-cover" alt="Noah Reynolds">
-                                            <div>
-                                                <div class="flex items-center gap-2">
-                                                    <h3 class="font-semibold text-lg text-dark">Noah Reynolds</h3>
-                                                    <i class="fa-solid fa-check-circle text-indigo-500"></i>
-                                                </div>
-                                                <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Manager</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2 mt-5 lg:mt-0">
-                                            <button class="px-4 py-1.5 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition">Remove</button>
-                                            <button class="px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">Make Admin</button>
-                                        </div>
-                                    </div>
-                                    <div id="team-member-3" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
-                                        <div class="flex items-center gap-4">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" class="w-12 h-12 rounded-full object-cover" alt="Olivia Chen">
-                                            <div>
-                                                <div class="flex items-center gap-2">
-                                                    <h3 class="font-semibold text-lg text-dark">Olivia Chen</h3>
-                                                    <i class="fa-solid fa-check-circle text-indigo-500"></i>
-                                                </div>
-                                                <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Cashier</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2 mt-5 lg:mt-0">
-                                            <button class="px-4 py-1.5 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition">Remove</button>
-                                            <button class="px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">Make Admin</button>
-                                        </div>
-                                    </div>
-                                    <div id="team-member-4" class="sm:flex items-center justify-between p-4 bg-slate-100 rounded-lg border border-slate-200">
-                                        <div class="flex items-center gap-4">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" class="w-12 h-12 rounded-full object-cover" alt="Liam Rodriguez">
-                                            <div>
-                                                <div class="flex items-center gap-2">
-                                                    <h3 class="font-semibold text-lg text-dark">Liam Rodriguez</h3>
-                                                </div>
-                                                <p class="text-sm text-gray-500 flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Stocker</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-2 mt-5 lg:mt-0">
-                                            <button class="px-4 py-1.5 text-sm font-semibold text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition">Remove</button>
-                                            <button class="px-4 py-1.5 text-sm font-semibold text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">Make Admin</button>
-                                        </div>
-                                    </div>
-                    </div>
-                </div>
-
-                <div id="recommends-tab" class="tab-panel hidden">
-                    <h2 class="text-xl font-semibold text-slate-800">For User Interface</h2>
-                    <div class="space-y-2">
-                                    <div id="recommendation-1" class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-12 h-12 rounded-full object-cover" alt="Erika Keegan">
-                                        <div class="ml-4">
-                                            <h3 class="font-semibold text-dark text-lg">Erika Keegan</h3>
-                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                <span>just now</span>
-                                                <i class="fa-solid fa-user-plus text-xs"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="recommendation-2" class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="Scott Collins">
-                                        <div class="ml-4">
-                                            <h3 class="font-semibold text-dark text-lg">Scott Collins</h3>
-                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                <span>2m ago</span>
-                                                <i class="fa-solid fa-user-plus text-xs"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="recommendation-3" class="flex items-center p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg" class="w-12 h-12 rounded-full object-cover" alt="Victoria Sharp">
-                                        <div class="ml-4">
-                                            <h3 class="font-semibold text-dark text-lg">Victoria Sharp</h3>
-                                            <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                <span>4m ago</span>
-                                                <i class="fa-solid fa-user-plus text-xs"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                    </div>
-                    <h2 class="text-xl font-semibold text-slate-800 mt-8 mb-2">For Admin Interface</h2>
-                    <div class="space-y-2">
-                                    <div id="recommendation-1" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <div class="flex items-center">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" class="w-12 h-12 rounded-full object-cover" alt="Erika Keegan">
-                                            <div class="ml-4">
-                                                <h3 class="font-semibold text-dark text-lg">Erika Keegan</h3>
-                                                <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                    <span>6m ago</span>
-                                                    <i class="fa-solid fa-user-plus text-xs"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="appreciation-btn appreciated p-2 rounded-full transform transition-transform duration-150">
-                                            <i class="fa-regular fa-hand text-2xl"></i>
-                                        </button>
-                                    </div>
-                                    <div id="recommendation-2" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <div class="flex items-center">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" class="w-12 h-12 rounded-full object-cover" alt="Scott Collins">
-                                            <div class="ml-4">
-                                                <h3 class="font-semibold text-dark text-lg">Scott Collins</h3>
-                                                <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                    <span>7m ago</span>
-                                                    <i class="fa-solid fa-user-plus text-xs"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="appreciation-btn p-2 rounded-full transform transition-transform duration-150">
-                                            <i class="fa-regular fa-hand text-2xl text-gray-400 hover:text-violet-500 transition-colors"></i>
-                                        </button>
-                                    </div>
-                                    <div id="recommendation-3" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <div class="flex items-center">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg" class="w-12 h-12 rounded-full object-cover" alt="Victoria Sharp">
-                                            <div class="ml-4">
-                                                <h3 class="font-semibold text-dark text-lg">Victoria Sharp</h3>
-                                                <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                    <span>15m ago</span>
-                                                    <i class="fa-solid fa-user-plus text-xs"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="appreciation-btn p-2 rounded-full transform transition-transform duration-150">
-                                            <i class="fa-regular fa-hand text-2xl text-gray-400 hover:text-violet-500 transition-colors"></i>
-                                        </button>
-                                    </div>
-                                     <div id="recommendation-4" class="flex items-center justify-between p-4 bg-slate-50 rounded-lg border border-slate-100">
-                                        <div class="flex items-center">
-                                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" class="w-12 h-12 rounded-full object-cover" alt="John Doe">
-                                            <div class="ml-4">
-                                                <h3 class="font-semibold text-dark text-lg">John Doe</h3>
-                                                <div class="flex items-center text-sm text-gray-500 gap-2 mt-1">
-                                                    <span>22m ago</span>
-                                                    <i class="fa-solid fa-user-plus text-xs"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="appreciation-btn p-2 rounded-full transform transition-transform duration-150">
-                                            <i class="fa-regular fa-hand text-2xl text-gray-400 hover:text-violet-500 transition-colors"></i>
-                                        </button>
-                                    </div>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-
-            <div id="reviews-section" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-3 sm:p-8">
-                        <h2 class="text-2xl font-bold text-dark mb-6">Customer Reviews</h2>
-                        <div class="space-y-6">
-                            <div class="border-b border-gray-100 pb-6">
-                                <div class="flex items-start gap-4">
-                                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="Reviewer" class="w-12 h-12 rounded-full object-cover">
-                                    <div class="flex-1">
-                                        <div class="flex items-center gap-3 mb-2">
-                                            <h4 class="font-semibold text-dark">Sarah Johnson</h4>
-                                            <div class="flex text-yellow-400">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <span class="text-sm text-gray-500">2 days ago</span>
-                                        </div>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            Excellent service and quality products! The produce is always fresh and the staff is incredibly helpful. I've been shopping here for years and they never disappoint.
-                                        </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="border-b border-gray-100 pb-6">
-                                <div class="flex items-start gap-4">
-                                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="Reviewer" class="w-12 h-12 rounded-full object-cover">
-                                    <div class="flex-1">
-                                        <div class="flex items-center gap-3 mb-2">
-                                            <h4 class="font-semibold text-dark">Michael Chen</h4>
-                                            <div class="flex text-yellow-400">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                            <span class="text-sm text-gray-500">1 week ago</span>
-                                        </div>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            Great selection of organic products and the deli section is outstanding. Prices are reasonable for the quality you get. Highly recommended!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex items-start gap-4">
-                                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="Reviewer" class="w-12 h-12 rounded-full object-cover">
-                                    <div class="flex-1">
-                                        <div class="flex items-center gap-3 mb-2">
-                                            <h4 class="font-semibold text-dark">Emily Rodriguez</h4>
-                                            <div class="flex text-yellow-400">
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-regular fa-star"></i>
-                                            </div>
-                                            <span class="text-sm text-gray-500">2 weeks ago</span>
-                                        </div>
-                                        <p class="text-gray-700 leading-relaxed">
-                                            Clean store with a good variety of products. The checkout process is always quick and efficient. The only minor issue is parking can be tight during peak hours.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="mt-6 w-full py-3 border border-gray-300 text-dark font-semibold rounded-lg hover:bg-gray-50 transition">
-                            View All Reviews
-                        </button>
-            </div>
+                                <button class="mt-6 w-full py-3 border border-gray-300 text-dark font-semibold rounded-lg hover:bg-gray-50 transition">
+                                    View All Reviews
+                                </button>
+                    </div>
                 </div>
 
                 <div id="right-column" class="space-y-6 mt-8 sm:mt-0">
-                    <div id="contact-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-                        <h3 class="text-xl font-bold text-dark mb-4">Contact Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <i class="fa-solid fa-location-dot text-primary-600"></i>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-dark">Address</p>
-                                    <p class="text-gray-600">123 Main Street, Monsey, NY 10952</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <i class="fa-solid fa-phone text-primary-600"></i>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-dark">Phone</p>
-                                    <p class="text-gray-600">(845) 555-0123</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <i class="fa-solid fa-envelope text-primary-600"></i>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-dark">Email</p>
-                                    <p class="text-gray-600">info@allfreshmarket.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                                    <i class="fa-solid fa-globe text-primary-600"></i>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-dark">Website</p>
-                                    <p class="text-gray-600">www.allfreshmarket.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <!-- LOCATION -->
                     <div id="map-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                         <h3 class="text-xl font-bold text-dark mb-4">Location</h3>
                         <div class="aspect-video bg-gray-200 rounded-lg mb-4 overflow-hidden">
@@ -721,6 +689,46 @@
                             Get Directions
                         </button>
                     </div>
+                    <!-- CONTACT INFORMATION -->
+                    <div id="contact-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                        <h3 class="text-xl font-bold text-dark mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-location-dot text-primary-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">123 Main Street, Monsey, NY 10952</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-phone text-primary-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">(845) 555-0123</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-envelope text-primary-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">info@allfreshmarket.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-globe text-primary-600"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-600">www.allfreshmarket.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
 
                     <div id="stats-card" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                         <h3 class="text-xl font-bold text-dark mb-4">Business Stats</h3>
